@@ -7,5 +7,5 @@
 
 <script lang="ts" setup>
 import Header from '@/views/components/Banner.vue';
-import OverviewSection from '@/views/components/OverviewSection.vue';
+import OverviewSection from '@/views/components/Overview.vue';
 </script>

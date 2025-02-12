@@ -1,10 +1,10 @@
 <template>
-    <section class="project-overview absolute xl:top-[48rem] lg:top-[35rem] left-0 right-0 bg-white px-8 w-full/12">
+    <section class="project-overview absolute xl:top-[48rem] left-0 right-0 bg-white px-8 w-full/12">
         <!-- Nội dung -->
-        <p class="text-6xl text-gray-700 leading-relaxed font-sans font-bold px-8 -mt-1/18">
+        <div class="text-6xl text-gray-700 leading-relaxed font-sans font-bold px-8 -mt-1/18">
             <!-- Tiêu đề -->
             <h2 class="text-xl font-sans font-bold text-gray-500 -mb-4 flex items-center gap-2">
-                <p class="w-3 h-3 bg-blue-500"></p>{{ projectOverview.title }}
+                {{ projectOverview.title }}
             </h2>
             <span class="font-bold text-[#A1CC95] px-2 py-1 rounded-md">
                 {{ projectOverview.highlight1 }}
@@ -19,7 +19,7 @@
             {{ projectOverview.content3 }}
             <br />
             {{ projectOverview.content4 }}
-        </p>
+        </div>
         <p class="w-1/2 font-sans text-black ml-auto text-sm text-gray-500 px-8 -mt-1/20">{{ miniView.details }}</p>
         <div class="absolute left-1/27 w-11/12 h-full mt-24 z-10">
             <video class="w-full h-full object-cover" autoplay loop muted playsinline>
@@ -36,7 +36,6 @@
 
 <script lang="ts" setup>
 import water from '@/assets/images/icon/water.svg';
-import Banner2 from '@/views/components/Banner2.vue';
 import group_bg from '@/assets/images/bg/group_bg.svg';
 import bg_ellipse from '@/assets/images/bg/group_bg_ellipse.svg';
 const updateBgSize = () => {
