@@ -1,6 +1,6 @@
 <template>
-    <section class="project-overview--container bg-white w-full/12">
-        <div class="project-overview--main px-8">
+    <section class="project-overview--container bg-white">
+        <div class="project-overview--main px-16">
             <div class="project-overview--main-content">
                 <div class="content-square"></div>
                 <h6 class="content-title">
@@ -18,8 +18,7 @@
                 </div>
                 <div class="mini-view mb-5">
                     {{ projectOverview.initiative }}
-                    <span
-                        class="highlight-gradient font-bold bg-gradient-to-r from-[#A1CC95] via-[#26AAE1] to-[#26AAE1] bg-[10%] bg-clip-text text-transparent px-2 py-1 rounded-md">
+                    <span class="highlight-gradient px-2 py-1 rounded-md">
                         {{ projectOverview.brilliance }}
                         <img :src="water" alt="water">
                     </span>
@@ -30,20 +29,19 @@
                 </div>
             </div>
             <div class="project-overview--main-details flex justify-end items-center">
-                <p class="lg:w-1/3 md:w-full">{{ miniView.details }}</p>
+                <p class="lg:w-1/2 md:w-full">{{ miniView.details }}</p>
             </div>
         </div>
 
-        <div class="project-video left-1/27 w-11/12 h-full mt-24 z-10">
-            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
-                <source src="@/assets/videos/Showreel_-Web-gallery-[remix].mp4" type="video/mp4">
-            </video>
+        <div class="project-video relative ">
+            <img :src="group_bg" alt="group_bg image" class="group_bg">
+            <div class="absolute z-1 w-11/12 ml-[4%] mt-16">
+                <video class="w-full h-full object-cover z-30" autoplay loop muted playsinline>
+                    <source src="@/assets/videos/Showreel_-Web-gallery-[remix].mp4" type="video/mp4">
+                </video>
+            </div>
+            <img :src="bg_ellipse" alt="bg_ellipse image" class="bg_ellipse">
         </div>
-
-        <!-- <div class="project-background mt-24">
-            <img :src="group_bg" alt="" class=" top-1/3 left-0">
-            <img :src="bg_ellipse" alt="" class="top-1/3 right-0">
-        </div> -->
     </section>
 </template>
 
@@ -65,3 +63,27 @@ const projectOverview = {
 };
 const miniView = { details: "Dự án thiết kế website với giao diện mới mang đến một diện mạo tươi mới, hiện đại, thể hiện tinh thần Thổi hồn vào sự rực rỡ của cuộc sống và tối ưu hóa hiệu quả tương tác với khách hàng. Website được xây dựng để trở thành một công cụ mạnh mẽ hỗ trợ các hoạt động marketing và kinh doanh, đồng thời mang đến trải nghiệm số vượt trội." }
 </script>
+<style>
+.highlight-gradient {
+    font-weight: bold;
+    background: linear-gradient(to right, #A1CC95, #26AAE1, #26AAE1, #26AAE1, #26AAE1);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.group_bg {
+    position: absolute;
+    left: -4%;
+    top: -300px;
+    z-index: 0;
+}
+
+.bg_ellipse {
+    position: absolute;
+    right: 0;
+    top: -300px;
+    z-index: 10;
+}
+</style>

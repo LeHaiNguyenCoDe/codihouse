@@ -3,9 +3,9 @@
     <Banner />
   </header>
 
-  <main class="main--container">
+  <main class="main--container bg-white">
    <Overview />
-   <Info />
+   <Info class="mt-2/3" />
    <Slider />
   </main>
 </template>

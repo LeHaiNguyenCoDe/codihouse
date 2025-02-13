@@ -10,7 +10,6 @@
     "build:static": "LANG=us vite-ssg build -c vite.config.ts --ssrManifest"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.6",
     "@unhead/vue": "^1.11.18",
     "motion": "^12.4.2",
     "vite-ssg": "^25.0.0",
@@ -20,6 +19,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.0.6",
     "@types/node": "^22.13.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
