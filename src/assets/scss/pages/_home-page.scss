@@ -1,0 +1,81 @@
+:root {
+    --space: 1600px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777E91;
+    background-color: #f4f4f4;
+}
+
+// Banner Styles
+.banner {
+    &-groups {
+        &-left {
+            img {
+                max-inline-size: 45%;
+                inset-inline-end: 50px;
+            }
+        }
+        
+        &-text {
+            position: absolute;
+            inset-block-end: 10%;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: clamp(12px, 1.2vw, 14px);
+            line-height: 20px;
+            letter-spacing: 4px;
+            color: #ffffff;
+            inline-size: fit-content;
+            max-inline-size: 80%;
+        }
+    }
+}
+
+//  Project Styles
+.project-overview--main {
+    &-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .content-square {
+            inline-size: 12px;
+            block-size: 12px;
+            background: #26AAE1;
+        }
+
+        .content-title {
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 5%;
+        }
+
+        &-text {
+            font-family: Montserrat;
+font-weight: 700;
+font-size: 64px;
+line-height: 78.02px;
+letter-spacing: 0%;
+
+        }
+    }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+    .banner-groups-text {
+        inset-block-end: 5%;
+        font-size: 4px;
+    }
+}
