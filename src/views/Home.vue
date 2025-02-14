@@ -1,9 +1,18 @@
 <template>
-	<section class="relative w-full min-h-screen flex flex-col items-center justify-start text-white">
-		<Header />
-	</section>
+ <header>
+    <Banner />
+  </header>
+
+  <main class="main--container bg-white">
+   <Overview />
+   <Info class="mt-2/3" />
+   <Slider />
+  </main>
 </template>
 
 <script lang="ts" setup>
-import Header from '@/views/components/Banner.vue';
+import Banner from './components/Banner.vue';
+import Info from './components/info.vue';
+import Overview from './components/Overview.vue';
+import Slider from './components/slide.vue';
 </script>
