@@ -1,7 +1,8 @@
 <template>
-	<router-view />
+	<Home/>
 </template>
 
 <script lang="ts" setup>
-	import 'uno.css'
+import 'uno.css'
+import Home from "@/views/Home.vue";
 </script>

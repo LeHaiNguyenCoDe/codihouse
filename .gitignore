@@ -33,6 +33,7 @@ components.d.ts
 yarn.lock
 *.env
 
-components.d.ts
+.vercel/output
 *.d.ts
 package-lock.json
+dist-*

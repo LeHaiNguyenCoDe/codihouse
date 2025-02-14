@@ -1,6 +1,9 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.json" }
-  ]
+    "files": [],
+    "references": [],
+    "compilerOptions": {
+        "types": ["vite/client"]
+    },
+    "outDir": "dist",
+    "noEmit": true, // Chặn TypeScript xuất file .js
 }
