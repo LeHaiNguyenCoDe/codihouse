@@ -1,10 +1,9 @@
 <template>
-	<div class="text-center">
-		<p class="text-xl mb-4">{{ $t('common.common.message') }}</p>
-	</div>
+	<section class="relative w-full min-h-screen flex flex-col items-center justify-start text-white">
+		<Header />
+	</section>
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+import Header from '@/views/components/Banner.vue';
 </script>
