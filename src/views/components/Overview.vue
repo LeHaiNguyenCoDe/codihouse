@@ -50,7 +50,7 @@ import water from '@/assets/images/icon/water.svg';
 import group_bg from '@/assets/images/bg/group_bg.svg';
 import bg_ellipse from '@/assets/images/bg/group_bg_ellipse.svg';
 import Info from './info.vue';
-import Slider from './slide.vue';
+import Slider from './Sliderview.vue';
 
 const projectOverview = {
     title: "Tổng Quan Dự Án",

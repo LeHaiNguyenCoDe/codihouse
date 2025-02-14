@@ -14,5 +14,5 @@
 import Banner from './components/Banner.vue';
 import Info from './components/Info.vue';
 import Overview from './components/Overview.vue';
-import Slider from './components/slide.vue';
+import Slider from './components/Sliderview.vue';
 </script>
