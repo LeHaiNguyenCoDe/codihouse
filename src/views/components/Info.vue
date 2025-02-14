@@ -1,16 +1,16 @@
 <template>
-    <div class="flex flex-col items-center bg-white">
-      <div class="project-overview--main-content w-11/12">
-        <div class="content-square"></div>
-        <h6 class="content-title">
+    <div class="flex flex-col items-center bg-white text-[#777E91] font-sans">
+      <div class="project-overview--main-content w-11/12 flex items-center gap-1 text-3xl -mb-8">
+        <div class="content-square w-3 h-3 bg-[#26AAE1]"></div>
+        <h6 class="content-title over-view">
             {{ projectTitleOverview.title }}
         </h6>
       </div>
       <div class="main--container px-8 w-11/12">
-          <div class="grid grid-cols-2 gap-4 text-3xl font-semibold">
-              <div><p class="pepsico-text">Suntory Pepsico</p> là một trong những doanh nghiệp hàng đầu trong ngành F&B tại Việt Nam, đồng thời tiên phong trong các hoạt động phát triển bền vững. Công ty luôn nỗ lực mang đến những sản phẩm chất lượng cao, đồng thời góp phần xây dựng một tương lai tốt đẹp hơn cho cộng đồng và môi trường.</div>
-              <div class="mx-auto flex">
-                  <img :src="bgRight" alt="">
+          <div class="grid grid-cols-2 gap-4">
+              <div class="w-10/12 info-text"><p class="pepsico-text">Suntory Pepsico</p> là một trong những doanh nghiệp hàng đầu trong ngành F&B tại Việt Nam, đồng thời tiên phong trong các hoạt động phát triển bền vững. Công ty luôn nỗ lực mang đến những sản phẩm chất lượng cao, đồng thời góp phần xây dựng một tương lai tốt đẹp hơn cho cộng đồng và môi trường.</div>
+              <div class="flex">
+                  <img :src="bgRight" alt="" class="md:w-2/3">
               </div>
           </div>
           <div class="grid grid-cols-4 gap-4 -mt-1/18">
@@ -118,8 +118,8 @@ onMounted(() => {
 
 <style scoped>
 .stat-number {
-    font-family: sans-serif;
-    font-weight: 800;
+    font-family: Montserrat;
+    font-weight: 650;
     font-size: 92px;
     line-height: 131.14px;
     letter-spacing: 0%;
@@ -127,17 +127,35 @@ onMounted(() => {
     transition: all 0.3s ease-in-out;
 }
 .pepsico-text {
-    color: #26AAE1;
+    color: #3882C4;
     display: inline;
 }
 
 .stat-label {
     font-family: Montserrat;
-    font-weight: 700;
+    font-weight: 650;
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 2%;
     color: #26AAE1;
+}
+.info-text {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 23.1px;
+  line-height: 36px;
+  letter-spacing: 2%;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 32px;
+    width: 90%;
+    margin-bottom: 64px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .stat-subtext {
@@ -148,4 +166,5 @@ onMounted(() => {
     letter-spacing: 0%;
     color: #777E91;
 }
+
 </style>

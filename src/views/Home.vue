@@ -1,5 +1,6 @@
 <template>
- <header>
+ <div class="text-reponsive">
+  <header>
     <Banner />
   </header>
 
@@ -8,6 +9,7 @@
    <Info class="mt-2/3" />
    <Slider />
   </main>
+ </div>
 </template>
 
 <script lang="ts" setup>
@@ -16,3 +18,15 @@ import Info from './components/info.vue';
 import Overview from './components/Overview.vue';
 import Slider from './components/slide.vue';
 </script>
+<style>
+.text-reponsive{
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}</style>

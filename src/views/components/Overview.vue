@@ -1,13 +1,13 @@
 <template>
     <section class="project-overview--container bg-white">
         <div class="project-overview--main px-16">
-            <div class="project-overview--main-content">
-                <div class="content-square"></div>
-                <h6 class="content-title">
+            <div class="project-overview--main-content text-3xl font-sans text-[#777E91] -mb-8 flex items-center gap-1">
+                <div class="content-square w-3 h-3 bg-[#26AAE1]"></div>
+                <h6 class="content-title over-view">
                     {{ projectOverview.title }}
                 </h6>
             </div>
-            <div class="project-overview--main-content-text">
+            <div class="project-overview--main-content-text text-view lg:text-4xl text-[#777E91]">
                 <div class="mini-view mb-5">
                     <span class="highlight-text font-bold text-[#A1CC95] px-2 py-1 rounded-md">
                         {{ projectOverview.innovation }}
@@ -20,7 +20,7 @@
                     {{ projectOverview.initiative }}
                     <span class="highlight-gradient px-2 py-1 rounded-md">
                         {{ projectOverview.brilliance }}
-                        <img :src="water" alt="water">
+                        <img :src="water" alt="water" class="water">
                     </span>
                     {{ projectOverview.impact }}
                 </div>
@@ -28,7 +28,7 @@
                     {{ projectOverview.efficiency }}
                 </div>
             </div>
-            <div class="project-overview--main-details flex justify-end items-center">
+            <div class="project-overview--main-details flex justify-end items-center text-miniview text-[#777E91]">
                 <p class="lg:w-1/2 md:w-full">{{ miniView.details }}</p>
             </div>
         </div>
@@ -76,8 +76,14 @@ const miniView = { details: "Dự án thiết kế website với giao diện m�
 .group_bg {
     position: absolute;
     left: -4%;
-    top: -300px;
+    top: -250px;
     z-index: 0;
+}
+
+.water {
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .bg_ellipse {
@@ -85,5 +91,37 @@ const miniView = { details: "Dự án thiết kế website với giao diện m�
     right: 0;
     top: -300px;
     z-index: 10;
+}
+.text-view{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78.02px;
+    letter-spacing: 0%;
+
+    @media (max-width: 1024px) {
+    font-size: 36px;
+    line-height: 32px;
+  }
+
+}
+.text-miniview{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 17.2px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+    @media (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.over-view {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 5%;
 }
 </style>
