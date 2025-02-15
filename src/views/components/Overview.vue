@@ -43,6 +43,8 @@
             <img :src="bg_ellipse" alt="bg_ellipse image" class="bg_ellipse">
         </div>
     </section>
+
+
 </template>
 
 <script lang="ts" setup>

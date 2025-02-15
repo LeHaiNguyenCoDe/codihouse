@@ -1,33 +1,29 @@
 <template>
- <div class="text-reponsive">
-  <header>
-    <Banner />
-  </header>
+  <div class="text-responsive">
+    <header>
+      <Banner />
+    </header>
 
-  <main class="main--container bg-white">
-   <Overview />
-   <Info class="mt-2/3" />
-   <Slider />
-  </main>
- </div>
+    <main class="main--container bg-white">
+      <Overview />
+      <Info class="mt-2/3" />
+      <Slider />
+      <SolutionExperience />
+    </main>
+  </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import Banner from './components/Banner.vue';
 import Info from './components/Info.vue';
 import Overview from './components/Overview.vue';
 import Slider from './components/Sliderview.vue';
+import SolutionExperience from "@/views/components/SolutionExperience.vue";
 </script>
 
-<style>
-.text-reponsive{
-  @media (max-width: 1024px) {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-    line-height: 28px;
-  }
-}</style>
+<style scoped>
+.text-responsive {
+  font-size: 18px;
+  line-height: 28px;
+}
+</style>

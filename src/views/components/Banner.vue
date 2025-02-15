@@ -33,11 +33,6 @@ import rectangle from '@/assets/images/header/Rectangle.svg';
   }
 }
 
-/* .suntory-pepsico{
-  font-size: 10px;
-  position: absolute;
-  left: 38%;
-} */
 .suntory-pepsico{
   font-family: Montserrat;
   font-weight: 500;
