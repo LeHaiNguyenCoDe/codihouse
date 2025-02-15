@@ -26,7 +26,7 @@
           </transition>
         </div>
 
-        <div class="grid grid-rows-2 md:w-1/3 text-white gap-2 -mx-6 relative">
+        <div class="grid grid-rows-2 md:w-1/3 text-white gap-2 -mx-6 relative overflow-visible">
           <div class="overflow-hidden no-scrollbar z-1">
             <transition-group name="fade" tag="div" class="flex gap-6">
               <div v-for="(slide, index) in filteredSlides" :key="index" class="cursor-pointer" @click="changeSlide(index)">
@@ -147,6 +147,10 @@ const prevSlide = () => {
 }
 .bg {
   background: linear-gradient(180deg, #3882C4 0%, #26AAE1 100%);
+  min-height: 900px;
+  @media (max-width: 1024px) {
+    min-height: 700px;
+  }
 }
 .number {
   color: #A8F4FC;
@@ -170,9 +174,10 @@ const prevSlide = () => {
 }
 .decord {
   @media (max-width: 1024px) {
-    transform: scale(0.7);
+    transform: scale(0.6);
     position: absolute;
-    top: 48px;
+    top: 40px;
+    right: 20%;
   }
 }
 

@@ -1,6 +1,11 @@
 <template>
+  
   <!-- Phần giải pháp thiết kế -->
   <div class="solution--experience pb-4">
+    <div class="-my-10">
+      <img :src="arrow" alt="arrow icon" class="block mx-auto mb-5">
+      <span class="text-[18px] font-sans font-medium text-white">Giải pháp thiết kế</span>
+    </div>
       <title-solution title="Trải Nghiệm Rực Rỡ" content="Tạo ra trải nghiệm thị giác và tương tác đầy hứng khởi, phản ánh tinh thần đúng tinh thần thương hiệu. Chúng tôi chú trọng vào thiết kế giao diện với bảng màu tươi sáng, hình ảnh và video chất lượng cao, cùng hiệu ứng chuyển động mượt mà để thu hút người dùng, khơi gợi cảm xúc tích cực và tạo ấn tượng mạnh mẽ ngay từ lần đầu truy cập." number="01" />
   </div>
 
@@ -15,6 +20,8 @@
 
   <!-- Phần phát triển bền vững -->
   <div class="sustainability__section" ref="sustainabilitySection">
+    <h1 class="development">Phát Triển</h1>
+    <h1 class="sustainable ">Bền Vững</h1>
     <img
         class="main-banner"
         :class="{ 'animated-circle': isVisible }"
@@ -30,7 +37,7 @@ import bgRight from "@/assets/images/bg/group_mobile.svg";
 import bgCenter from "@/assets/images/bg/group_bg_03.svg";
 import bgLeft from "@/assets/images/bg/group_mobile_02.svg";
 import bgCase from "@/assets/images/bg/case.svg";
-import test from "@/assets/images/bg/white_bg.svg";
+import arrow from "@/assets/images/icon/arrow.svg";
 import TitleSolution from "@/views/components/titleSolution.vue";
 
 const sustainabilitySection = ref<HTMLElement | null>(null);
@@ -73,7 +80,30 @@ onUnmounted(() => {
   min-height: 947px;
   max-height: 947px;
 }
-
+.development {
+  position: absolute;
+  font-family: Montserrat;
+  font-size: 56px;
+  line-height: 80px;
+  letter-spacing: 0%;
+  top: 44.5%;
+  left: 24.5%;
+  transform: translate(-50%, -50%); 
+  color: #3882C4;
+  background: transparent;
+}
+.sustainable {
+  position: absolute;
+  font-family: Montserrat;
+  font-size: 56px;
+  line-height: 80px;
+  letter-spacing: 0%;
+  top: 44.5%;
+  right: 4%;
+  transform: translate(-50%, -50%); 
+  color: #3882C4;
+  background: transparent;
+}
 .sustainability__section {
   position: relative;
   width: 100%;

@@ -64,7 +64,7 @@ const props = defineProps({
   line-height: 1;
   opacity: 0.1;
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 52%;
   transform: translate(-50%, -50%);
   color: transparent;
@@ -75,7 +75,7 @@ const props = defineProps({
 
 .solution--experience-contents {
   position: absolute;
-  bottom: 18%;
+  bottom: 12%;
   max-width: 846px;
   z-index: 2;
 }
