@@ -3,8 +3,18 @@
     <h1>{{ number }}</h1>
   </div>
   <div class="solution--experience-contents pb-16">
-    <h1 class="font-sans font-extrabold text-[72px] leading-[80px] tracking-[3%] text-center"> {{ title }} </h1>
-    <p class="font-[Montserrat] font-normal text-[16px] leading-[24px] tracking-[0] text-center"> {{ content }} </p>
+    <h1
+        class="font-sans font-extrabold text-[72px] leading-[80px] tracking-[3%] text-center"
+        :style="{ color: titleColor }"
+    >
+      {{ title }}
+    </h1>
+    <p
+        class="font-[Montserrat] font-normal text-[16px] leading-[24px] tracking-[0] text-center"
+        :style="{ color: contentColor }"
+    >
+      {{ content }}
+    </p>
     <div class="h-[209px]"></div>
   </div>
   <img :src="image" alt="" class="w-screen absolute bottom-0">
@@ -30,19 +40,22 @@ const props = defineProps({
     type: String,
     required: false,
     default: ''
+  },
+  titleColor: {
+    type: String,
+    required: false,
+    default: '#FFFFFF'
+  },
+  contentColor: {
+    type: String,
+    required: false,
+    default: '#FFFFFF'
   }
 });
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
 
-.ptbv {
-  font-family: Montserrat;
-  font-size: 56px;
-  line-height: 80px;
-  letter-spacing: 0%;
-
-}
 .solution--experience-title {
   font-size: 240px;
   font-family: sans-serif;
