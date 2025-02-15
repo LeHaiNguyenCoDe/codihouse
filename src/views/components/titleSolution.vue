@@ -7,11 +7,12 @@
     <p class="font-[Montserrat] font-normal text-[16px] leading-[24px] tracking-[0] text-center"> {{ content }} </p>
     <div class="h-[209px]"></div>
   </div>
-  <img :src="image" alt="" class="w-screen absolute bottom-0">
+  <img :src="white_bg" alt="" class="w-screen absolute bottom-0">
 </template>
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import white_bg from "@/assets/images/bg/white_bg.svg"
 
 const props = defineProps({
   number: {
