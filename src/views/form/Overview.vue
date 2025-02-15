@@ -37,7 +37,7 @@
             <img :src="group_bg" alt="group_bg image" class="group_bg">
             <div class="absolute z-1 w-11/12 ml-[4%] mt-16">
                 <video class="w-full h-full object-cover z-30" autoplay loop muted playsinline>
-                    <source src="@/assets/videos/Showreel_-Web-gallery-[remix].mp4" type="video/mp4">
+                    <source src="../../assets/videos/Showreel_-Web-gallery-%5Bremix%5D.mp4" type="video/mp4">
                 </video>
             </div>
             <img :src="bg_ellipse" alt="bg_ellipse image" class="bg_ellipse">
@@ -51,7 +51,7 @@
 import water from '@/assets/images/icon/water.svg';
 import group_bg from '@/assets/images/bg/group_bg.svg';
 import bg_ellipse from '@/assets/images/bg/group_bg_ellipse.svg';
-import Info from './info.vue';
+import Info from './Info.vue';
 import Slider from './Sliderview.vue';
 
 const projectOverview = {

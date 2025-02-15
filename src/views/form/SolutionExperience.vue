@@ -1,17 +1,7 @@
 <template>
   <!-- Phần giải pháp thiết kế -->
-  <div class="solution--experience">
-    <div class="solution--experience-title">
-      <h1>01</h1>
-    </div>
-    <div class="solution--experience-contents">
-      <h1 class="font-sans font-extrabold text-[72px] leading-[80px] tracking-[3%] text-center">Trải Nghiệm Rực Rỡ</h1>
-      <p class="font-[Montserrat] font-normal text-[16px] leading-[24px] tracking-[0] text-center">
-        Tạo ra trải nghiệm thị giác và tương tác đầy hứng khởi, phản ánh tinh thần đúng tinh thần thương hiệu. Chúng tôi chú trọng vào thiết kế giao diện với bảng màu tươi sáng, hình ảnh và video chất lượng cao, cùng hiệu ứng chuyển động mượt mà để thu hút người dùng, khơi gợi cảm xúc tích cực và tạo ấn tượng mạnh mẽ ngay từ lần đầu truy cập.
-      </p>
-      <div class="h-[209px]"></div>
-    </div>
-    <img :src="test" alt="" class="w-screen absolute bottom-0">
+  <div class="solution--experience pb-4">
+      <title-solution title="Trải Nghiệm Rực Rỡ" content="Tạo ra trải nghiệm thị giác và tương tác đầy hứng khởi, phản ánh tinh thần đúng tinh thần thương hiệu. Chúng tôi chú trọng vào thiết kế giao diện với bảng màu tươi sáng, hình ảnh và video chất lượng cao, cùng hiệu ứng chuyển động mượt mà để thu hút người dùng, khơi gợi cảm xúc tích cực và tạo ấn tượng mạnh mẽ ngay từ lần đầu truy cập." number="01" />
   </div>
 
   <!-- Phần hình ảnh -->
@@ -41,6 +31,7 @@ import bgCenter from "@/assets/images/bg/group_bg_03.svg";
 import bgLeft from "@/assets/images/bg/group_mobile_02.svg";
 import bgCase from "@/assets/images/bg/case.svg";
 import test from "@/assets/images/bg/white_bg.svg";
+import TitleSolution from "@/views/components/titleSolution.vue";
 
 const sustainabilitySection = ref<HTMLElement | null>(null);
 const isVisible = ref(false);
@@ -82,64 +73,6 @@ onUnmounted(() => {
   overflow: hidden;
   min-height: 947px;
   max-height: 947px;
-}
-.ptbv {
-  font-family: Montserrat;
-  font-size: 56px;
-  line-height: 80px;
-  letter-spacing: 0%;
-
-}
-.solution--experience-title {
-  font-size: 240px;
-  font-family: sans-serif;
-  font-weight: 800;
-  line-height: 1;
-  opacity: 0.1;
-  position: absolute;
-  top: 40%;
-  left: 52%;
-  transform: translate(-50%, -50%);
-  color: transparent;
-  -webkit-text-stroke: 5px white;
-  -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
-.solution--experience-contents {
-  position: absolute;
-  bottom: 18%;
-  max-width: 846px;
-  z-index: 2;
-}
-
-.solution--experience-contents h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.solution--experience-contents p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-@media (max-width: 1024px) {
-  .solution--experience-title {
-    font-size: 200px;
-  }
-  .solution--experience-contents h1 {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  .solution--experience-title {
-    font-size: 120px;
-  }
-  .solution--experience-contents h1 {
-    font-size: 28px;
-  }
 }
 
 .sustainability__section {

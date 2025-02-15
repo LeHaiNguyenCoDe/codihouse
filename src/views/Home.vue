@@ -14,11 +14,11 @@
 </template>
 
 <script setup>
-import Banner from './components/Banner.vue';
-import Info from './components/Info.vue';
-import Overview from './components/Overview.vue';
-import Slider from './components/Sliderview.vue';
-import SolutionExperience from "@/views/components/SolutionExperience.vue";
+import Banner from './form/Banner.vue';
+import Info from './form/Info.vue';
+import Overview from './form/Overview.vue';
+import Slider from './form/Sliderview.vue';
+import SolutionExperience from "@/views/form/SolutionExperience.vue";
 </script>
 
 <style scoped>
