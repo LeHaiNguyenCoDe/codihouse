@@ -1,8 +1,8 @@
 <template>
-  <div class="solution--experience-title">
+  <div class="solution--experience-title" :style="{'-webkit-text-stroke': textStroke }">
     <h1>{{ number }}</h1>
   </div>
-  <div class="solution--experience-contents pb-16">
+  <div class="solution--experience-contents">
     <h1
         class="font-sans font-extrabold text-[72px] leading-[80px] tracking-[3%] text-center"
         :style="{ color: titleColor }"
@@ -51,6 +51,11 @@ const props = defineProps({
     type: String,
     required: false,
     default: '#FFFFFF'
+  },
+  textStroke: {
+    type: String,
+    required: false,
+    default: '5px white'
   }
 });
 </script>

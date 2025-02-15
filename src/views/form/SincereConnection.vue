@@ -2,18 +2,49 @@
   <section class="bg flex flex-col mt-6 font-sans">
     <div class="sincer-ceonnection pb-4">
       <TitleSolution
-          number="01"
-          title="Trải Nghiệm Rực Rỡ"
-          content="Tạo ra trải nghiệm thị giác và tương tác đầy hứng khởi..."
-          image="/path/to/image.jpg"
+          number="02"
+          title="Kết Nối Chân Thành"
+          content="Cấu trúc thông tin rõ ràng, nội dung đa dạng, dễ tiếp cận, cung cấp cái nhìn toàn diện về thương hiệu cho khách hàng. Mục tiêu là tạo ra một không gian số thân thiện, nơi người dùng cảm thấy được lắng nghe và kết nối sâu sắc với thương hiệu."
           titleColor="#3882C4"
           contentColor="#777E91"
+          textStroke="3px #26AAE1"
       />
+    </div>
+    <div class="sincer-ceonnection--content  flex place-content-center">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="col-start-1 col-span-1">
+          <img :src="group_01" alt="iconv-lite" />
+        </div>
+        <div class="col-start-3 col-span-1">
+          <img :src="group_02" alt="iconv-lite" />
+        </div>
+        <div class="col-start-2 col-span-1">
+          <img :src="group_03" alt="iconv-lite" />
+        </div>
+        <div class="col-start-3 col-span-1">
+          <img :src="group_04" alt="iconv-lite" />
+        </div>
+      </div>
+
+      <div class="flex absolute z-0">
+        <div class="row-span-2 row-start-2">
+          <img :src="Ellipse" alt="iconv-lite" />
+        </div>
+        <div class="row-span-2 row-end-3 absolute right-0">
+          <img :src="iconvLite" alt="iconv-lite" />
+        </div>
+      </div>
     </div>
   </section>
 </template>
 <script setup lang="ts">
 import TitleSolution from "@/views/components/titleSolution.vue";
+import iconvLite from "@/assets/images/bg/group_icon.png"
+import Ellipse from "@/assets/images/bg/Ellipse.png"
+import group_01 from "@/assets/images/bg/group_1000004254.png"
+import group_02 from "@/assets/images/bg/group_1000004255.png"
+import group_03 from "@/assets/images/bg/group_1000004256.png"
+import group_04 from "@/assets/images/bg/group_1000004257.png"
 </script>
 <style lang="css">
 .sincer-ceonnection {
@@ -27,5 +58,14 @@ import TitleSolution from "@/views/components/titleSolution.vue";
   overflow: hidden;
   min-height: 947px;
   max-height: 947px;
+}
+.sincer-border {
+  width: 496px;
+  height: 496px;
+  top: 8670px;
+  left: 238px;
+  background: linear-gradient(90deg, rgba(161, 204, 149, 0.5) 0%, rgba(38, 170, 225, 0.25) 100%);
+  backdrop-filter: blur(155.6999969482422px);
+  border-radius: 50%;
 }
 </style>
