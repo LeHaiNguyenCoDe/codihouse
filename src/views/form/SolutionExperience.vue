@@ -11,7 +11,7 @@
 
   <!-- Phần hình ảnh -->
   <div>
-    <div class="flex gap-6 relative justify-center -mt-1/4">
+    <div class="flex gap-6 relative justify-center -mt-1/5">
       <div class="left-phone"> <img :src="bgRight" alt="" class="w-[251px] h-[543px]"></div>
       <div> <img :src="bgCenter" alt="" class="w-full"></div>
       <div class="right-phone"> <img :src="bgLeft" alt="" class="w-[251px] h-[543px]"></div>

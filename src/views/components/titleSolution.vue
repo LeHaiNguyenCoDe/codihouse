@@ -15,7 +15,7 @@
     >
       {{ content }}
     </p>
-    <div class="h-[209px]"></div>
+    <div class="white-space h-[209px]" :style="{ display: whiteSpace }"></div>
   </div>
   <img :src="white_bg" alt="" class="w-screen absolute bottom-0">
 </template>
@@ -23,6 +23,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 import white_bg from "@/assets/images/bg/white_bg.svg"
+import { style } from 'motion/react-client';
 
 const props = defineProps({
   number: {
@@ -56,6 +57,11 @@ const props = defineProps({
     type: String,
     required: false,
     default: '5px white'
+  },
+  whiteSpace: {
+    type: String,
+    required: false,
+    default: "block",
   }
 });
 </script>
@@ -77,7 +83,9 @@ const props = defineProps({
   -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
-
+.white-space {
+  height: 209px;
+}
 .solution--experience-contents {
   position: absolute;
   bottom: 12%;

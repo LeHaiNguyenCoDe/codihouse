@@ -8,10 +8,11 @@
           titleColor="#3882C4"
           contentColor="#777E91"
           textStroke="3px #26AAE1"
+          whiteSpace="none"
       />
     </div>
-    <div class="sincer-ceonnection--content  flex place-content-center">
-      <div class="grid grid-cols-3 gap-4">
+    <div class="sincer-ceonnection--content relative flex place-content-center">
+      <div class="grid grid-cols-3 gap-8 z-1">
         <div class="col-start-1 col-span-1">
           <img :src="group_01" alt="iconv-lite" />
         </div>
@@ -26,13 +27,14 @@
         </div>
       </div>
 
-      <div class="flex absolute z-0">
-        <div class="row-span-2 row-start-2">
-          <img :src="Ellipse" alt="iconv-lite" />
-        </div>
-        <div class="row-span-2 row-end-3 absolute right-0">
+      <div class="flex z-0">
+        <div class="row-span-2 row-end-3 absolute right-1/3 top-1/10">
           <img :src="iconvLite" alt="iconv-lite" />
         </div>
+        <div class="row-span-2 row-start-2 absolute left-1/10">
+          <img :src="Ellipse" alt="iconv-lite" />
+        </div>
+        
       </div>
     </div>
   </section>
@@ -56,7 +58,7 @@ import group_04 from "@/assets/images/bg/group_1000004257.png"
   color: #3882C4;
   position: relative;
   overflow: hidden;
-  min-height: 947px;
+  min-height: 500px;
   max-height: 947px;
 }
 .sincer-border {
