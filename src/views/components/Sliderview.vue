@@ -1,42 +1,42 @@
 <template>
-    <div class="bg flex flex-col items-center mt-8">
-      <div class="project-overview--main-content px-8 pt-8 w-11/12 grid grid-cols-11 gap-4">
-        <div class="col-span-2 flex items-center space-x-4">
-          <div class="content-square"></div>
-          <h6 class="content-title text-white">
+    <div class="bg flex flex-col items-center mt-6 font-sans">
+      <div class="project-overview--main-content px-8 pt-8 w-11/12 grid grid-cols-11 gap-4 items-end">
+        <div class="col-span-2 md:col-span-4 flex items-center space-x-4 text-3xl">
+          <div class="content-square w-3 h-3 bg-[#7BE2F6]"></div>
+          <h6 class="content-title text-white target">
             {{ projectTitleOverview.title }}
           </h6>
         </div>
-        <div class="col-start-8 col-span-3 text-white text-xs ml-2">
+        <div class="col-start-8 col-span-3 text-white target-text ml-2">
           Dự án thiết kế website mới cho Suntory Pepsico hướng đến việc "đánh thức mọi giác quan" của 
           người dùng, mang đến một trải nghiệm số đầy cảm xúc và kết nối sâu sắc với tinh thần "Thổi hồn vào sự rực rỡ
         </div>
       </div>
 
-      <div class="main--container w-11/12">
+      <div class="main--container w-11/12 mt-8">
         <div class="flex flex-col md:flex-row items-center md:items-start">
           <div class="relative w-full md:w-2/3 z-1">
             <transition name="fade" mode="out-in">
               <img :src="mainSlide.image" :key="mainSlide.image" alt="Main Slide" class="shadow-lg big-image">
             </transition>
             <transition name="fade" mode="out-in">
-              <div class="w-2/3 bottom-4 left-4 text-white text-4xl font-semibold flex gap-6" :key="mainSlide.text">
+              <div class="w-2/3 bottom-4 left-4 text-white text-4xl reponsive font-semibold flex gap-6" :key="mainSlide.text">
                 <span class="whitespace-nowrap number">{{ mainSlide.number }}/</span> <span class="font-bold">{{ mainSlide.text }}</span>
               </div>
             </transition>
           </div>
           
-          <div class="grid grid-rows-2 md:w-1/3 text-white gap-2 -mx-6">
+          <div class="grid grid-rows-2 md:w-1/3 text-white gap-2 -mx-6 relative">
             <!-- Nội dung phụ -->
-            <div class=" overflow-hidden no-scrollbar z-1">
+            <div class="overflow-hidden no-scrollbar z-1">
               <transition-group name="fade" tag="div" class="flex gap-6">
                 <div v-for="(slide, index) in filteredSlides" :key="index" class="cursor-pointer" @click="changeSlide(index)">
-                  <img :src="slide.image" alt="Slide" class="small-image h-[211px] shadow-md">
-                  <div class="leading-relaxed flex items-center number text-4xl h-12"><p>{{ slide.number }}</p>/</div>
+                  <img :src="slide.image" alt="Slide" class="small-image shadow-md">
+                  <div class="leading-relaxed flex items-center number text-4xl h-12 reponsive"><p>{{ slide.number }}</p>/</div>
                 </div>
               </transition-group>
             </div>
-            <div class="flex gap-4 justify-end items-center mt-16">
+            <div class="flex gap-4 justify-end items-end z-1">
               <button class="bg-transparent w-12 h-12 p-2 rounded-full shadow-md hover:bg-white/50 transition text-white border-white" @click="prevSlide">
                 &#8592;
               </button>
@@ -44,8 +44,8 @@
                 &#8594;
               </button>
             </div>
-            <div class="relative">
-              <img :src="circle" alt="" class="absolute -left-3/4 bottom-1/2">
+            <div>
+              <img :src="circle" alt="" class="absolute -left-3/4 -bottom-1/3 decord">
             </div>
           </div>
         </div>
@@ -104,7 +104,14 @@ const prevSlide = () => {
   max-width: 1200px;
   margin: auto;
 }
+.target{
+  font-family: "BT Beau Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 5%;
 
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
 }
@@ -114,14 +121,27 @@ const prevSlide = () => {
 .big-image {
   width: 845px;
   height: 536px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+  }
 }
 .small-image {
   width: 411px;
-  height: auto;
+  height: 211px;
+  object-fit: cover;
+  @media (max-width: 1024px) {
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+  }
 }
 .overflow-hidden {
   overflow-x: auto;
   white-space: nowrap;
+  @media (max-width: 1024px) {
+    margin-left: 56px;
+  }
 }
 .no-scrollbar {
   &::-webkit-scrollbar {
@@ -135,5 +155,29 @@ const prevSlide = () => {
 }
 .number {
   color: #A8F4FC;
+}
+.reponsive {
+  @media (max-width: 1024px) {
+    font-size: 100%;
+    width: 100%;
+  }
+}
+.target-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  width: 411px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.decord {
+  @media (max-width: 1024px) {
+    transform: scale(0.7);
+    position: absolute;
+    top: 48px;
+  }
 }
 </style>
