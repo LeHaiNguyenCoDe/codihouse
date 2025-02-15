@@ -9,6 +9,7 @@
       <Info class="mt-2/3" />
       <Slider />
       <SolutionExperience />
+      <SincereConnection />
     </main>
   </div>
 </template>
@@ -19,6 +20,7 @@ import Info from './form/Info.vue';
 import Overview from './form/Overview.vue';
 import Slider from './form/Sliderview.vue';
 import SolutionExperience from "@/views/form/SolutionExperience.vue";
+import SincereConnection from "@/views/form/SincereConnection.vue";
 </script>
 
 <style scoped>
