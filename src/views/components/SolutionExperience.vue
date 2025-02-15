@@ -75,12 +75,13 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 20px;
   background: linear-gradient(0deg, #A1CC95 2.43%, #26AAE1 97.48%);
   color: white;
   position: relative;
   overflow: hidden;
   min-height: 947px;
+  max-height: 947px;
 }
 .ptbv {
   font-family: Montserrat;
