@@ -5,15 +5,15 @@
     </header>
 
     <main class="main--container bg-white container mx-auto">
-     <Overview />
-     <Info class="mt-2/3" />
-     <Slider />
-     <SolutionExperience />
-     <SincereConnection />
-     <AboutSection />
-     <WaterSustainability />
-     <InferencePriority />
-     <NatureExploration />
+      <Overview />
+      <Info class="mt-2/3" />
+      <Slider />
+      <SolutionExperience />
+      <SincereConnection />
+      <AboutSection />
+      <WaterSustainability />
+      <InferencePriority />
+      <NatureExploration />
     </main>
   </div>
 </template>
@@ -31,6 +31,4 @@ import { InferencePriority } from 'typescript';
 import NatureExploration from './form/NatureExploration.vue';
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
