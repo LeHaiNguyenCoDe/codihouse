@@ -10,24 +10,45 @@
   </div>
 
   <!-- Phần hình ảnh -->
-  <div>
-    <div class="flex gap-6 relative justify-center -mt-1/5">
-      <div class="left-phone"> <img :src="bgRight" alt="" class="w-[251px] h-[543px]"></div>
-      <div> <img :src="bgCenter" alt="" class="w-full"></div>
-      <div class="right-phone"> <img :src="bgLeft" alt="" class="w-[251px] h-[543px]"></div>
-    </div>
-  </div>
+  <!-- <div class="flex gap-6 relative justify-center -mt-1/5">
+    <div class="left-phone"> <img :src="bgRight" alt="" class="w-[251px] h-[543px]"></div>
+    <div> <img :src="bgCenter" alt="" class="w-full"></div>
+    <div class="right-phone"> <img :src="bgLeft" alt="" class="w-[251px] h-[543px]"></div>
+  </div> -->
+  <div class="space-y-32">
+    <div class="grid grid-cols-5 -mt-1/5">
+      <div class="col-span-3 col-start-2 relative">
+        <!-- Left Phone -->
+        <div class="left-phone" :style="{ transform: leftTranslate }">
+          <img :src="bgRight" alt="" class="w-[92%] h-[543px]" />
+        </div>
 
-  <!-- Phần phát triển bền vững -->
-  <div class="sustainability__section" ref="sustainabilitySection">
-    <h1 class="development">Phát Triển</h1>
-    <h1 class="sustainable ">Bền Vững</h1>
-    <img
-        class="main-banner"
-        :class="{ 'animated-circle': isVisible }"
-        :src="bgCase"
-        alt="Banner"
-    />
+        <!-- Center Image -->
+        <img :src="bgCenter" alt="" class="bg-center" />
+
+        <!-- Vector -->
+        <div class="vector">
+          <img :src="vector" alt="" />
+        </div>
+
+        <!-- Right Phone -->
+        <div class="right-phone" :style="{ transform: rightTranslate }">
+          <img :src="bgLeft" alt="" class="w-[92%] h-[543px]" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần phát triển bền vững -->
+    <div class="sustainability__section" ref="sustainabilitySection">
+      <h1 class="development">Phát Triển</h1>
+      <h1 class="sustainable ">Bền Vững</h1>
+      <img
+          class="main-banner"
+          :class="{ 'animated-circle': isVisible }"
+          :src="bgCase"
+          alt="Banner"
+      />
+    </div>
   </div>
 </template>
 
@@ -39,6 +60,7 @@ import bgLeft from "@/assets/images/bg/group_mobile_02.svg";
 import bgCase from "@/assets/images/bg/case.svg";
 import arrow from "@/assets/images/icon/arrow.svg";
 import TitleSolution from "@/views/components/titleSolution.vue";
+import vector from '@/assets/images/header/Vector.svg';
 
 const sustainabilitySection = ref<HTMLElement | null>(null);
 const isVisible = ref(false);
@@ -65,6 +87,56 @@ onMounted(() => {
 onUnmounted(() => {
   // Cleanup observer nếu cần
 });
+import { computed, onBeforeUnmount } from "vue";
+
+const y = ref(0);
+const screenWidth = ref(window.innerWidth);
+let animationFrameId: number | null = null;
+
+const updateY = () => {
+  y.value += 1;
+  animationFrameId = requestAnimationFrame(updateY);
+};
+const updateScroll = () => {
+  y.value = window.scrollY;
+};
+
+// Hàm cập nhật chiều rộng màn hình
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", updateScroll);
+  window.addEventListener("resize", updateScreenWidth);
+});
+
+// Computed để tạo giá trị transform động
+const leftTranslate = computed(() => {
+  let translate = `translateY(${Math.sin(y.value * 0.01) * 100}px)`;
+  if (screenWidth.value <= 1024) {
+    translate += " scale(0.7)";
+  }
+  if (screenWidth.value <= 767) {
+    translate = `translateY(${Math.sin(y.value * 0.01) * -50}px)`+ " scale(0.4)";
+  }
+  return translate;
+});
+const rightTranslate = computed(() => {
+  let translate = `translateY(${Math.sin(y.value * 0.01) * -100}px)`;
+  if (screenWidth.value <= 1024) {
+    translate += " scale(0.7)";
+  }
+  if (screenWidth.value <= 767) {
+    translate = `translateY(${Math.sin(y.value * 0.01) * -50}px)` + " scale(0.4)";
+  }
+  return translate;
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateScroll);
+  window.removeEventListener("resize", updateScreenWidth);
+});
 </script>
 
 <style scoped>
@@ -79,6 +151,33 @@ onUnmounted(() => {
   overflow: hidden;
   min-height: 947px;
   max-height: 947px;
+}
+.vector {
+  position: absolute;
+  top: 33%;
+  left: 45%;
+  z-index: 0;
+  @media (max-width: 1024px) {
+    transform: scale(0.7);
+    top: 25%;
+    left: 25%;
+  }
+  @media (max-width: 820px) {
+    transform: scale(0.45);
+    top: 20%;
+    left: 18%;
+  }
+  @media (max-width: 767px) {
+    transform: scale(0.2);
+    top: -5%;
+    left: -50%;
+  }
+}
+.bg-center {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
 }
 .development {
   position: absolute;
@@ -107,7 +206,7 @@ onUnmounted(() => {
 .sustainability__section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,13 +214,43 @@ onUnmounted(() => {
 }
 .left-phone {
   position: absolute;
-  left: 8%;
   top: 31%;
+  left: -22%;
+  z-index: 2;
+  @media (max-width: 1024px) {
+    transform: scale(0.7);
+    top: 26.5%;
+    left: -30%;
+  }
+  @media (max-width: 820px) {
+    transform: scale(0.7);
+    top: 25%;
+    left: -40%;
+  }
+  @media (max-width: 767px) {
+    top: 18%;
+    left: -65%;
+  }
 }
 .right-phone {
   position: absolute;
-  right: 10%;
-  bottom: 17%;
+  bottom: 18%;
+  right: -22%;
+  z-index: 2;
+  @media (max-width: 1024px) {
+    transform: scale(0.7);
+    bottom: 14%;
+    right: -30%;
+  }
+  @media (max-width: 820px) {
+    transform: scale(0.7);
+    bottom: 8%;
+    right: -40%;
+  }
+  @media (max-width: 767px) {
+    top: 35%;
+    right: -65%;
+  }
 }
 .main-banner {
   width: 100%;

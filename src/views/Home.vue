@@ -9,7 +9,7 @@
       <Info class="mt-2/3" />
       <Slider />
       <SolutionExperience />
-      <SincereConnection />
+      <!-- <SincereConnection /> -->
     </main>
   </div>
 </template>

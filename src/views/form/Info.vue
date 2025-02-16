@@ -10,7 +10,7 @@
           <div class="grid grid-cols-2 gap-4">
               <div class="w-10/12 info-text"><p class="pepsico-text">Suntory Pepsico</p> là một trong những doanh nghiệp hàng đầu trong ngành F&B tại Việt Nam, đồng thời tiên phong trong các hoạt động phát triển bền vững. Công ty luôn nỗ lực mang đến những sản phẩm chất lượng cao, đồng thời góp phần xây dựng một tương lai tốt đẹp hơn cho cộng đồng và môi trường.</div>
               <div class="flex">
-                  <img :src="bgRight" alt="" class="md:w-2/3">
+                  <img :src="bgRight" alt="" class="md:w-2/3 bg-right">
               </div>
           </div>
           <div class="grid grid-cols-4 gap-4 -mt-1/18">
@@ -36,7 +36,7 @@
                           <div class="stat-item">
                               <div class="stat-number" :id="'stat-number-' + group[0].id"><span class="">Top </span>{{ group[0].value }}</div>
                               <div class="stat-label">{{ group[0].label }}</div>
-                              <div class="stat-subtext whitespace-nowrap">{{ group[0].subtext }}</div>
+                              <!-- <div class="stat-subtext whitespace-nowrap">{{ group[0].subtext }}</div> -->
                           </div>
                       </div>
                   </div>
@@ -129,7 +129,12 @@ onMounted(() => {
     color: #3882C4;
     display: inline;
 }
-
+.bg-right {
+  @media (max-width: 767px){
+    position: absolute; 
+    left: 0;
+  }
+}
 .stat-label {
     font-family: Montserrat;
     font-weight: 650;

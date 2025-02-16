@@ -11,19 +11,19 @@
           whiteSpace="none"
       />
     </div>
-    <div class="sincer-ceonnection--content relative flex place-content-center">
+    <div class="sincer-ceonnection--content relative flex place-content-center sincere-connection-reponsive">
       <div class="grid grid-cols-3 gap-8 z-1">
         <div class="col-start-1 col-span-1">
-          <img :src="group_01" alt="iconv-lite" />
+          <img :src="group_01" alt="iconv-lite"/>
         </div>
         <div class="col-start-3 col-span-1">
-          <img :src="group_02" alt="iconv-lite" />
+          <img :src="group_02" alt="iconv-lite"/>
         </div>
         <div class="col-start-2 col-span-1">
-          <img :src="group_03" alt="iconv-lite" />
+          <img :src="group_03" alt="iconv-lite"/>
         </div>
         <div class="col-start-3 col-span-1">
-          <img :src="group_04" alt="iconv-lite" />
+          <img :src="group_04" alt="iconv-lite"/>
         </div>
       </div>
 
@@ -34,7 +34,6 @@
         <div class="row-span-2 row-start-2 absolute left-1/10">
           <img :src="Ellipse" alt="iconv-lite" />
         </div>
-        
       </div>
     </div>
   </section>
@@ -61,6 +60,19 @@ import group_04 from "@/assets/images/bg/group_1000004257.png"
   min-height: 500px;
   max-height: 947px;
 }
+
+@media (max-width: 1024px) {
+  .sincere-connection-reponsive {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 820px) {
+  .sincere-connection-reponsive {
+    transform: scale(0.5);
+  }
+}
+
 .sincer-border {
   width: 496px;
   height: 496px;

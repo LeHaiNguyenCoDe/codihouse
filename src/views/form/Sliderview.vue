@@ -174,10 +174,10 @@ const prevSlide = () => {
 }
 .decord {
   @media (max-width: 1024px) {
-    transform: scale(0.6);
+    transform: scale(0.4);
     position: absolute;
     top: 40px;
-    right: 20%;
+    right: 25%;
   }
 }
 
