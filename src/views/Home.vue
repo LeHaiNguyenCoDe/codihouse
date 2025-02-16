@@ -4,12 +4,12 @@
       <Banner />
     </header>
 
-    <main class="main--container bg-white container mx-auto">
+    <main class="main--container bg-white container">
      <Overview />
      <Info class="mt-2/3" />
      <Slider />
      <SolutionExperience />
-     <SincereConnection />
+     <!-- <SincereConnection /> -->
      <AboutSection />
      <WaterSustainability />
      <InferencePriority />

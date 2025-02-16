@@ -1,14 +1,14 @@
 <template>
     <div class="flex flex-col items-center bg-white text-[#777E91] font-sans">
-      <div class="project-overview--main-content w-11/12 flex items-center gap-1 text-3xl -mb-8">
+      <div class="project-overview--main-content w-11/12 flex items-center gap-1 text-3xl -mb-8 over-view-reponsive">
         <div class="content-square w-3 h-3 bg-[#26AAE1]"></div>
         <h6 class="content-title over-view">
             {{ projectTitleOverview.title }}
         </h6>
       </div>
       <div class="main--container px-8 w-11/12">
-          <div class="grid grid-cols-2 gap-4">
-              <div class="w-10/12 info-text"><p class="pepsico-text">Suntory Pepsico</p> là một trong những doanh nghiệp hàng đầu trong ngành F&B tại Việt Nam, đồng thời tiên phong trong các hoạt động phát triển bền vững. Công ty luôn nỗ lực mang đến những sản phẩm chất lượng cao, đồng thời góp phần xây dựng một tương lai tốt đẹp hơn cho cộng đồng và môi trường.</div>
+          <div class="grid grid-cols-2 gap-4 relative">
+              <div class="w-10/12 info-text col-span-2"><p class="pepsico-text">Suntory Pepsico</p> là một trong những doanh nghiệp hàng đầu trong ngành F&B tại Việt Nam, đồng thời tiên phong trong các hoạt động phát triển bền vững. Công ty luôn nỗ lực mang đến những sản phẩm chất lượng cao, đồng thời góp phần xây dựng một tương lai tốt đẹp hơn cho cộng đồng và môi trường.</div>
               <div class="flex">
                   <img :src="bgRight" alt="" class="md:w-2/3 bg-right">
               </div>
@@ -132,7 +132,14 @@ onMounted(() => {
 .bg-right {
   @media (max-width: 767px){
     position: absolute; 
+    transform: scale(0.6);
     left: 0;
+    top: -30%;
+  }
+}
+.over-view-reponsive {
+  @media (max-width: 767px){
+    margin-top: 5%;
   }
 }
 .stat-label {
@@ -158,6 +165,10 @@ onMounted(() => {
   @media (max-width: 768px) {
     font-size: 18px;
     line-height: 28px;
+  }
+  @media (max-width: 767px) {
+    grid-column: span 2;
+    text-align: center;
   }
 }
 

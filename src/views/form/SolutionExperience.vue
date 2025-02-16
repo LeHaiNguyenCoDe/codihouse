@@ -8,13 +8,6 @@
     </div>
       <title-solution title="Trải Nghiệm Rực Rỡ" content="Tạo ra trải nghiệm thị giác và tương tác đầy hứng khởi, phản ánh tinh thần đúng tinh thần thương hiệu. Chúng tôi chú trọng vào thiết kế giao diện với bảng màu tươi sáng, hình ảnh và video chất lượng cao, cùng hiệu ứng chuyển động mượt mà để thu hút người dùng, khơi gợi cảm xúc tích cực và tạo ấn tượng mạnh mẽ ngay từ lần đầu truy cập." number="01" />
   </div>
-
-  <!-- Phần hình ảnh -->
-  <!-- <div class="flex gap-6 relative justify-center -mt-1/5">
-    <div class="left-phone"> <img :src="bgRight" alt="" class="w-[251px] h-[543px]"></div>
-    <div> <img :src="bgCenter" alt="" class="w-full"></div>
-    <div class="right-phone"> <img :src="bgLeft" alt="" class="w-[251px] h-[543px]"></div>
-  </div> -->
   <div class="space-y-32">
     <div class="grid grid-cols-5 -mt-1/5">
       <div class="col-span-3 col-start-2 relative">
@@ -118,7 +111,7 @@ const leftTranslate = computed(() => {
     translate += " scale(0.7)";
   }
   if (screenWidth.value <= 767) {
-    translate = `translateY(${Math.sin(y.value * 0.01) * -50}px)`+ " scale(0.4)";
+    translate = `translateY(${Math.sin(y.value * 0.01) * 50}px)`+ " scale(0.4)";
   }
   return translate;
 });
