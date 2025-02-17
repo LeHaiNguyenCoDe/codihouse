@@ -14,7 +14,7 @@
     </div>
 
     <div class="main--container w-11/12 mt-8">
-      <div class="flex justify-between items-start slide-reponsive">
+      <div class="flex justify-between gap-6 items-start slide-reponsive">
         <div class="relative z-1 big-section">
           <transition name="fade" mode="out-in">
             <img :src="mainSlide.image" :key="mainSlide.image" alt="Main Slide" class="shadow-lg big-image">
@@ -31,7 +31,7 @@
             <transition-group name="fade" tag="div" class="small-slide-section">
               <div v-for="(slide, index) in filteredSlides" :key="index" class="cursor-pointer" @click="changeSlide(index)">
                 <img :src="slide.image" alt="Slide" class="small-image shadow-md">
-                <div class="leading-relaxed flex items-center number text-4xl h-12"><p>{{ slide.number }}</p>/</div>
+                <div class="leading-relaxed flex items-center number text-4xl h-12 w-24"><p>{{ slide.number }}</p>/</div>
               </div>
             </transition-group>
           </div>

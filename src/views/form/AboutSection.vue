@@ -1,5 +1,5 @@
 <template>
-  <section class="info-display mt-1/6">
+  <section class="info-display mt-1/6 w-11/12 mx-auto">
     <div class="info-display__container">
       <div class="info-display__image-wrapper">
         <img :src="bgLeft" alt="Left Image" class="info-display__image" />
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="info-display__video mt-4">
-      <video class="w-full h-full object-cover z-30" autoplay loop muted playsinline>
+      <video class="w-full h-full object-cover" autoplay loop muted playsinline>
         <source src="../../assets/videos/d0776f50d5c38fc57224a8daf098efbfa67da290.mp4" type="video/mp4">
       </video>
     </div>
@@ -34,6 +34,7 @@ import video from "../../assets/videos/d0776f50d5c38fc57224a8daf098efbfa67da290.
   gap: 20px;
   inline-size: 100%;
   position: relative;
+  z-index: 0;
 }
 
 .info-display__image-wrapper {

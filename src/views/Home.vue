@@ -3,7 +3,7 @@
       <Banner />
     </header>
 
-    <main class="main--container bg-white container mx-auto">
+    <main class="main--container bg-white container">
       <Overview />
       <Info class="mt-2/3" />
       <Slider />
@@ -12,6 +12,7 @@
       <AboutSection />
       <WaterSustainability />
       <InferencePriority />
+      <InteractiveShowcase />
       <NatureExploration />
     </main>
 </template>
@@ -27,6 +28,11 @@ import AboutSection from "@/views/form/AboutSection.vue";
 import WaterSustainability from './form/WaterSustainability.vue';
 import { InferencePriority } from 'typescript';
 import NatureExploration from './form/NatureExploration.vue';
+import InteractiveShowcase from './form/InteractiveShowcase.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+.main--container{
+  max-width: max-content;
+}
+</style>

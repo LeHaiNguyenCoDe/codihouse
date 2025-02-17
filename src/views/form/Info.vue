@@ -6,43 +6,43 @@
             {{ projectTitleOverview.title }}
         </h6>
       </div>
-      <div class="main--container px-8 w-11/12">
+      <!-- <div class="main--container px-8 w-11/12">
           <div class="grid grid-cols-2 gap-4 relative">
               <div class="w-10/12 info-text col-span-1"><p class="pepsico-text">Suntory Pepsico</p> là một trong những doanh nghiệp hàng đầu trong ngành F&B tại Việt Nam, đồng thời tiên phong trong các hoạt động phát triển bền vững. Công ty luôn nỗ lực mang đến những sản phẩm chất lượng cao, đồng thời góp phần xây dựng một tương lai tốt đẹp hơn cho cộng đồng và môi trường.</div>
               <div class="flex">
                   <img :src="bgRight" alt="" class="w-2/3 bg-right">
               </div>
           </div>
-          <div class="grid grid-cols-4 gap-4 -mt-1/18">
-              <template v-for="(group, groupIndex) in groupedStats" :key="'group-' + groupIndex">
-                  <div v-if="groupIndex === 0" class="stat-item">
-                      <div class="stat-number" :id="'stat-number-' + group[0].id">{{ group[0].value }}</div>
-                      <div class="stat-label">{{ group[0].label }}</div>
-                      <div class="stat-subtext">{{ group[0].subtext }}</div>
-                  </div>
+          <div class="grid grid-cols-4 gap-4 -mt-1/18 info-number-reponsive">
+            <template v-for="(group, groupIndex) in groupedStats" :key="'group-' + groupIndex">
+                <div v-if="groupIndex === 0" class="stat-item">
+                    <div class="stat-number" :id="'stat-number-' + group[0].id">{{ group[0].value }}</div>
+                    <div class="stat-label">{{ group[0].label }}</div>
+                    <div class="stat-subtext">{{ group[0].subtext }}</div>
+                </div>
 
-                  <div v-else-if="groupIndex === 1" class="col-span-3 grid grid-cols-3 gap-4">
-                      <div v-for="stat in group" :key="stat.id" :class="'col-start-' + stat.colStart">
-                          <div class="stat-item">
-                              <div class="stat-number" :id="'stat-number-' + stat.id">{{ stat.value }}</div>
-                              <div class="stat-label">{{ stat.label }}</div>
-                              <div class="stat-subtext">{{ stat.subtext }}</div>
-                          </div>
-                      </div>
-                  </div>
+                <div v-else-if="groupIndex === 1" class="col-span-3 grid grid-cols-3 gap-4">
+                    <div v-for="stat in group" :key="stat.id" :class="'col-start-' + stat.colStart">
+                        <div class="stat-item">
+                            <div class="stat-number" :id="'stat-number-' + stat.id">{{ stat.value }}</div>
+                            <div class="stat-label">{{ stat.label }}</div>
+                            <div class="stat-subtext">{{ stat.subtext }}</div>
+                        </div>
+                    </div>
+                </div>
 
-                  <div v-else-if="groupIndex === 2" class="col-span-3 grid grid-cols-3 gap-4">
-                      <div class="col-start-3 col-span-1 flex flex-col justify-center items-center">
-                          <div class="stat-item">
-                              <div class="stat-number" :id="'stat-number-' + group[0].id"><span class="">Top </span>{{ group[0].value }}</div>
-                              <div class="stat-label">{{ group[0].label }}</div>
-                              <!-- <div class="stat-subtext whitespace-nowrap">{{ group[0].subtext }}</div> -->
-                          </div>
-                      </div>
-                  </div>
-              </template>
-          </div>
-      </div>
+                <div v-else-if="groupIndex === 2" class="col-span-3 grid grid-cols-3 gap-4">
+                    <div class="col-start-3 col-span-1 flex flex-col justify-center items-center">
+                        <div class="stat-item">
+                            <div class="stat-number" :id="'stat-number-' + group[0].id"><span class="">Top </span>{{ group[0].value }}</div>
+                            <div class="stat-label">{{ group[0].label }}</div>
+                            <div class="stat-subtext whitespace-nowrap">{{ group[0].subtext }}</div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+      </div> -->
     </div>
 </template>
 

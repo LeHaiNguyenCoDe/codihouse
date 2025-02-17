@@ -8,7 +8,7 @@
     </div>
       <title-solution title="Trải Nghiệm Rực Rỡ" content="Tạo ra trải nghiệm thị giác và tương tác đầy hứng khởi, phản ánh tinh thần đúng tinh thần thương hiệu. Chúng tôi chú trọng vào thiết kế giao diện với bảng màu tươi sáng, hình ảnh và video chất lượng cao, cùng hiệu ứng chuyển động mượt mà để thu hút người dùng, khơi gợi cảm xúc tích cực và tạo ấn tượng mạnh mẽ ngay từ lần đầu truy cập." number="01" />
   </div>
-  <div class="space-y-32">
+  <div class="space-y">
     <div class="grid grid-cols-5 -mt-1/5">
       <div class="col-span-3 col-start-2 relative">
         <!-- Left Phone -->
@@ -151,6 +151,14 @@ onBeforeUnmount(() => {
     min-height: 700px;
   }
 }
+.space-y {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  @media (max-width: 1024px) {
+    gap: 16px;
+  }
+}
 .vector {
   position: absolute;
   top: 33%;
@@ -189,6 +197,16 @@ onBeforeUnmount(() => {
   transform: translate(-50%, -50%); 
   color: #3882C4;
   background: transparent;
+  @media (max-width: 1024px) {
+    transform: scale(0.7);
+    top: 31%;
+    left: 10%;
+  }
+  @media (max-width: 767px) {
+    transform: scale(0.3);
+    top: 5%;
+    left: -12%;
+  }
 }
 .sustainable {
   position: absolute;
@@ -201,6 +219,16 @@ onBeforeUnmount(() => {
   transform: translate(-50%, -50%); 
   color: #3882C4;
   background: transparent;
+  @media (max-width: 1024px) {
+    transform: scale(0.7);
+    top: 31%;
+    right: 10%;
+  }
+  @media (max-width: 767px) {
+    transform: scale(0.3);
+    top: 5%;
+    right: -12%;
+  }
 }
 .sustainability__section {
   position: relative;

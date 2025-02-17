@@ -14,6 +14,20 @@
                     Sử dụng CTA rõ ràng, hấp dẫn, hướng dẫn người dùng thực hiện hành động mong muốn.
                 </p>
             </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-8">
+                <div class="relative -mt-4 z-10">
+                    <img :src="bgEllipse1" alt="">
+                </div>
+                <div class="flex items-end justify-end">
+                    <img :src="bgEllipse4" alt="">
+                </div>
+                <div class="flex justify-start items-start -mt-6">
+                    <img :src="bgEllipse2" alt="">
+                </div>
+                <div class="flex items-center justify-center">
+                    <img :src="bgEllipse3" alt="">
+                </div>
+            </div>
         </div>
         <!-- <div class="water-sustainability__bg-ellipse">
             <img :src="bgEllipse" alt="Background White" class="water-sustainability__image-ellipse" />
@@ -27,7 +41,11 @@
 
 <script lang="ts" setup>
 import bgWhite from "../../assets/images/bg/rectangle_30420.png";
-import bgEllipse from "../../assets/images/ellipse/ellipse_19182.png";
+import bgEllipse from "@/assets/images/ellipse/ellipse_19182.png";
+import bgEllipse1 from "@/assets/images/ellipse/image_watersustainability_01.svg";
+import bgEllipse2 from "@/assets/images/ellipse/image_watersustainability_02.svg";
+import bgEllipse3 from "@/assets/images/ellipse/image_watersustainability_03.svg";
+import bgEllipse4 from "@/assets/images/ellipse/image_watersustainability_04.svg";
 </script>
 
 <style scoped>
@@ -40,6 +58,7 @@ import bgEllipse from "../../assets/images/ellipse/ellipse_19182.png";
     text-align: center;
     block-size: 806px;
     overflow: hidden;
+    min-height: 1200px;
 }
 
 .water-sustainability__bg-ellipse {
@@ -73,6 +92,7 @@ import bgEllipse from "../../assets/images/ellipse/ellipse_19182.png";
     transform: translate(-50%, -50%);
     text-align: center;
     max-width: 415px;
+    max-height: 323px;
 }
 
 .text-content__title {

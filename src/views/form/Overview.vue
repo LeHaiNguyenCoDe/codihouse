@@ -80,6 +80,9 @@ const miniView = { details: "Dự án thiết kế website với giao diện m�
     left: -4%;
     top: -250px;
     z-index: 0;
+    @media (max-width: 767px) {
+    transform: scale(0.8);
+  }
 }
 
 .water {
@@ -93,6 +96,7 @@ const miniView = { details: "Dự án thiết kế website với giao diện m�
     right: 0;
     top: -300px;
     z-index: 10;
+    
 }
 .text-view{
     font-family: Montserrat;

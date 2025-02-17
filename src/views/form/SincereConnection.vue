@@ -28,10 +28,10 @@
       </div>
 
       <div class="flex z-0">
-        <div class="row-span-2 row-end-3 absolute right-1/3 top-1/10 iconv-lite">
+        <div class="row-span-2 row-end-3 absolute right-1/3 top-1/8">
           <img :src="iconvLite" alt="iconv-lite"/>
         </div>
-        <div class="row-span-2 row-start-2 absolute left-1/10 iconv-lite">
+        <div class="row-span-2 row-start-2 absolute left-1/10 bottom-[2%]">
           <img :src="Ellipse" alt="iconv-lite"/>
         </div>
       </div>
@@ -57,8 +57,11 @@ import group_04 from "@/assets/images/bg/group_1000004257.png"
   color: #3882C4;
   position: relative;
   overflow: hidden;
-  min-height: 400px;
+  min-height: 420px;
   max-height: 947px;
+  @media (max-width: 767px) {
+    margin-top: -15%;
+  }
 }
 
 .p1{
@@ -109,6 +112,13 @@ import group_04 from "@/assets/images/bg/group_1000004257.png"
     transform: scale(0.6);
   }
 }
+
+@media (max-width:767px) {
+  .bg {
+    width: 100%;
+    height: fit-content;
+  }
+}
 .sincer-border {
   width: 496px;
   height: 496px;
@@ -121,10 +131,11 @@ import group_04 from "@/assets/images/bg/group_1000004257.png"
 .reponsive{
   @media (max-width: 1024px) {
     transform: scale(0.6);
+    height: 70%;
   }
   @media (max-width: 767px) {
     transform: scale(0.4);
-    height: 80;
+    height: fit-content;
   }
 }
 </style>
