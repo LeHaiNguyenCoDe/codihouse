@@ -1,6 +1,6 @@
 <template>
     <section class="water-sustainability">
-        <div class="water-sustainability__container">
+        <div class="water-sustainability__container relative">
             <div class="text-content">
                 <div class="text-content__description">
                     <img src="../../assets/images/info/shape_brand.png" alt="Background White" />
@@ -14,27 +14,29 @@
                     Sử dụng CTA rõ ràng, hấp dẫn, hướng dẫn người dùng thực hiện hành động mong muốn.
                 </p>
             </div>
-            <div class="grid grid-cols-2 grid-rows-2 gap-8">
-                <div class="relative -mt-4 z-10">
-                    <img :src="bgEllipse1" alt="">
+            <div class="grid grid-cols-2 grid-rows-2 gap-8 relative h-[1200px]">
+                <div class="relative col-start-1 row-start-1">
+                    <img :src="bgEllipse1" alt="" class="bgellipse-1">
                 </div>
-                <div class="flex items-end justify-end">
-                    <img :src="bgEllipse4" alt="">
+                <div class="relative col-start-2 row-start-1">
+                    <img :src="bgEllipse4" alt="" class="bgellipse-2">
                 </div>
-                <div class="flex justify-start items-start -mt-6">
-                    <img :src="bgEllipse2" alt="">
+                <div class="relative col-start-1 row-start-2">
+                    <img :src="bgEllipse2" alt="" class="bgellipse-3">
                 </div>
-                <div class="flex items-center justify-center">
-                    <img :src="bgEllipse3" alt="">
+                <div class="relative col-start-2 row-start-2 flex justify-center my-[5%]">
+                    <img :src="bgEllipse3" alt="" class="bgellipse-4">
+                </div>
+                <div class="water-sustainability__bg-white">
+                    <img :src="bgWhite" alt="Background White" class="water-sustainability__image" />
+                </div>
+                <div class="water-sustainability__bg-ellipse">
+                    <img :src="bgEllipse" alt="Background White" class="water-sustainability__image-ellipse" />
                 </div>
             </div>
         </div>
-        <!-- <div class="water-sustainability__bg-ellipse">
-            <img :src="bgEllipse" alt="Background White" class="water-sustainability__image-ellipse" />
-        </div> -->
-        <div class="water-sustainability__bg-white">
-            <img :src="bgWhite" alt="Background White" class="water-sustainability__image" />
-        </div>
+        
+        
     </section>
     
 </template>
@@ -48,9 +50,36 @@ import bgEllipse3 from "@/assets/images/ellipse/image_watersustainability_03.svg
 import bgEllipse4 from "@/assets/images/ellipse/image_watersustainability_04.svg";
 </script>
 
-<style scoped>
+<style>
+.water-sustainability__bg-white{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.bgellipse-1 {
+    position: absolute;
+    top: -10%;
+    left: 25%;
+    z-index: 1;
+}
+.bgellipse-2 {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    z-index: 1;
+}
+.bgellipse-3 {
+    position: absolute;
+    top: -60%;
+    left: 10%;
+    z-index: 1;
+}
+.bgellipse-4 {
+    position: absolute;
+    top: -10%;
+    left: 30%;
+}
 .water-sustainability {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,6 +88,8 @@ import bgEllipse4 from "@/assets/images/ellipse/image_watersustainability_04.svg
     block-size: 806px;
     overflow: hidden;
     min-height: 1200px;
+    z-index: 0;
+    margin-top: 5%;
 }
 
 .water-sustainability__bg-ellipse {
@@ -71,9 +102,8 @@ import bgEllipse4 from "@/assets/images/ellipse/image_watersustainability_04.svg
 }
 
 .water-sustainability__image-ellipse {
-    inline-size: 100%;
-    max-inline-size: 806px;
-    mix-blend-mode: screen;
+    position: absolute;
+    left: -40%;
 }
 
 .water-sustainability__bg-white {

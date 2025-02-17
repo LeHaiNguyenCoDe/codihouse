@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="main--container w-11/12 mt-8">
+    <div class="main--container w-full mt-8 flex flex-col items-center">
       <div class="flex justify-between gap-6 items-start slide-reponsive">
         <div class="relative z-1 big-section">
           <transition name="fade" mode="out-in">
@@ -35,7 +35,7 @@
               </div>
             </transition-group>
           </div>
-          <div class="flex gap-4 justify-end items-end z-1">
+          <div class="button">
             <button class="slider-button slider-button-prev" @click="prevSlide"> &#8592;</button>
             <button class="slider-button slider-button-next" @click="nextSlide">&#8594;</button>
           </div>
@@ -79,6 +79,7 @@ const slides = ref([
 ]);
 
 const mainSlideIndex = ref(0);
+
 const mainSlide = computed(() => slides.value[mainSlideIndex.value]);
 const filteredSlides = computed(() => slides.value.filter((_, index) => index !== mainSlideIndex.value));
 
@@ -98,6 +99,16 @@ const prevSlide = () => {
 .slider-container {
   max-width: 1200px;
   margin: auto;
+}
+.button {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 18px;
+  margin-right: 23%;
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
 }
 .target{
   font-family: "BT Beau Sans", sans-serif;
@@ -127,7 +138,7 @@ const prevSlide = () => {
 }
 
 .small-section {
-  width: 37%;
+  width: 40%;
   @media (max-width: 1024px){
     display: flex;
     flex-direction: column;
@@ -147,10 +158,12 @@ const prevSlide = () => {
   }
 }
 .slide-reponsive {
+  margin-left: 4%;
   @media (max-width: 1024px){
     display: flex;
+    margin-left: 0%;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     gap: 48px;
   }
 }
@@ -189,7 +202,7 @@ const prevSlide = () => {
   overflow-x: auto;
   white-space: nowrap;
   @media (max-width: 1024px) {
-    margin-left: 56px;
+    margin-left: 10%;
   }
 }
 .no-scrollbar {
