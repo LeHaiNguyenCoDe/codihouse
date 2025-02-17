@@ -144,6 +144,12 @@ onBeforeUnmount(() => {
   overflow: hidden;
   min-height: 947px;
   max-height: 947px;
+  @media (max-width: 1024px) {
+    min-height: 800px;
+  }
+  @media (max-width: 767px) {
+    min-height: 700px;
+  }
 }
 .vector {
   position: absolute;

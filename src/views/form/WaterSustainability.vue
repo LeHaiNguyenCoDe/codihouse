@@ -15,9 +15,9 @@
                 </p>
             </div>
         </div>
-        <div class="water-sustainability__bg-ellipse">
+        <!-- <div class="water-sustainability__bg-ellipse">
             <img :src="bgEllipse" alt="Background White" class="water-sustainability__image-ellipse" />
-        </div>
+        </div> -->
         <div class="water-sustainability__bg-white">
             <img :src="bgWhite" alt="Background White" class="water-sustainability__image" />
         </div>

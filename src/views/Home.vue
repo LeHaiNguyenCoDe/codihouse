@@ -1,5 +1,4 @@
 <template>
-  <div class="text-responsive">
     <header>
       <Banner />
     </header>
@@ -15,7 +14,6 @@
       <InferencePriority />
       <NatureExploration />
     </main>
-  </div>
 </template>
 
 <script setup>

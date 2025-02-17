@@ -15,7 +15,7 @@
     >
       {{ content }}
     </p>
-    <div class="white-space h-[209px]" :style="{ display: whiteSpace }"></div>
+    <div class=" white-space " :style="{ display: whiteSpace }"></div>
   </div>
   <img :src="white_bg" alt="" class="w-screen absolute bottom-0">
 </template>
@@ -82,15 +82,27 @@ const props = defineProps({
   -webkit-text-stroke: 5px white;
   -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  @media (max-width: 1024px) {
+    top: 40%;
+  }
 }
-.white-space {
+.white-space{
   height: 209px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 .solution--experience-contents {
   position: absolute;
-  bottom: 12%;
+  bottom: 18%;
   max-width: 846px;
   z-index: 2;
+  @media (max-width: 1024px) {
+    top: 35%;
+  }
+  @media (max-width: 767px) {
+    bottom: 8%;
+  }
 }
 
 .solution--experience-contents h1 {

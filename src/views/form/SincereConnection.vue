@@ -11,28 +11,28 @@
           whiteSpace="none"
       />
     </div>
-    <div class="sincer-ceonnection--content relative flex place-content-center sincere-connection-reponsive">
-      <div class="grid grid-cols-3 gap-8 z-1">
-        <div class="col-start-1 col-span-1">
+    <div class="sincer-ceonnection--content relative flex place-content-center reponsive">
+      <div class="sincere-connection-reponsive">
+        <div class="col-start-1 col-span-1 p1">
           <img :src="group_01" alt="iconv-lite"/>
         </div>
-        <div class="col-start-3 col-span-1">
+        <div class="col-start-3 col-span-1 p2">
           <img :src="group_02" alt="iconv-lite"/>
         </div>
-        <div class="col-start-2 col-span-1">
+        <div class="col-start-2 col-span-1 p3">
           <img :src="group_03" alt="iconv-lite"/>
         </div>
-        <div class="col-start-3 col-span-1">
+        <div class="col-start-3 col-span-1 p4">
           <img :src="group_04" alt="iconv-lite"/>
         </div>
       </div>
 
       <div class="flex z-0">
-        <div class="row-span-2 row-end-3 absolute right-1/3 top-1/10">
-          <img :src="iconvLite" alt="iconv-lite" />
+        <div class="row-span-2 row-end-3 absolute right-1/3 top-1/10 iconv-lite">
+          <img :src="iconvLite" alt="iconv-lite"/>
         </div>
-        <div class="row-span-2 row-start-2 absolute left-1/10">
-          <img :src="Ellipse" alt="iconv-lite" />
+        <div class="row-span-2 row-start-2 absolute left-1/10 iconv-lite">
+          <img :src="Ellipse" alt="iconv-lite"/>
         </div>
       </div>
     </div>
@@ -57,22 +57,58 @@ import group_04 from "@/assets/images/bg/group_1000004257.png"
   color: #3882C4;
   position: relative;
   overflow: hidden;
-  min-height: 500px;
+  min-height: 400px;
   max-height: 947px;
 }
 
+.p1{
+  @media (max-width: 767px) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 5%;
+    height: 5%;
+  }
+}
+.p2{
+  @media (max-width: 767px) {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    width: 5%;
+    height: 5%;
+  }
+}
+.p3{
+  @media (max-width: 767px) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 5%;
+    height: 5%;
+  }
+}
+.p4{
+  @media (max-width: 767px) {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: 5%;
+    height: 5%;
+  }
+}
+.sincere-connection-reponsive {
+    display: grid;
+    grid-column: 3;
+    gap: 32px;
+    z-index: 1;
+  @media (max-width: 1024px) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
 @media (max-width: 1024px) {
-  .sincere-connection-reponsive {
-    transform: scale(0.8);
+  .iconv-lite{
+    transform: scale(0.6);
   }
 }
-
-@media (max-width: 820px) {
-  .sincere-connection-reponsive {
-    transform: scale(0.5);
-  }
-}
-
 .sincer-border {
   width: 496px;
   height: 496px;
@@ -81,5 +117,14 @@ import group_04 from "@/assets/images/bg/group_1000004257.png"
   background: linear-gradient(90deg, rgba(161, 204, 149, 0.5) 0%, rgba(38, 170, 225, 0.25) 100%);
   backdrop-filter: blur(155.6999969482422px);
   border-radius: 50%;
+}
+.reponsive{
+  @media (max-width: 1024px) {
+    transform: scale(0.6);
+  }
+  @media (max-width: 767px) {
+    transform: scale(0.4);
+    height: 80;
+  }
 }
 </style>
