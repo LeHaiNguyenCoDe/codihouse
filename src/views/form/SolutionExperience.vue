@@ -13,20 +13,20 @@
       <div class="col-span-3 col-start-2 relative">
         <!-- Left Phone -->
         <div class="left-phone" :style="{ transform: leftTranslate }">
-          <img src="../../assets/images/info/mobile/group_mobile.svg" alt="" class="w-[92%] h-[543px]" />
+          <img src="~@/assets/images/info/mobile/group_mobile.svg" alt="" class="w-[92%] h-[543px]" />
         </div>
 
         <!-- Center Image -->
-        <img src="../../assets/images/info/group/path_group_02.svg" alt="" class="bg-center" />
+        <img src="~@/assets/images/info/group/path_group_02.svg" alt="" class="bg-center" />
 
         <!-- Vector -->
         <div class="vector">
-          <img src="../../assets/images/header/vector.png" alt="" />
+          <img src="~@/assets/images/header/vector.png" alt="" />
         </div>
 
         <!-- Right Phone -->
         <div class="right-phone" :style="{ transform: rightTranslate }">
-          <img src="../../assets/images/info/mobile/group_mobile_02.svg" alt="" class="w-[92%] h-[543px]" />
+          <img src="~@/assets/images/info/mobile/group_mobile_02.svg" alt="" class="w-[92%] h-[543px]" />
         </div>
       </div>
     </div>

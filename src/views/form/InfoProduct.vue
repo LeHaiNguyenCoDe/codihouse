@@ -20,7 +20,7 @@ import SolutionExperience from './SolutionExperience.vue';
                 <div
                     class="lg:text-[64px] md:text-[48px] sm:text-[32px] text-[24px] font-bold text-title-bold color-darks mt-4">
                     lan tỏa <span class="font-bold bg-gradient">sự rực rỡ</span>
-                    <img src="../../assets/images/info/water-surface.png" alt="water" class="me-3 pl-6"> và nâng cao
+                    <img src="~@/assets/images/info/water-surface.png" alt="water" class="me-3 pl-6"> và nâng cao
                 </div>
                 <div
                     class="lg:text-[64px] md:text-[48px] sm:text-[32px] text-[24px] font-bold text-title-bold color-darks mt-4">
@@ -40,9 +40,9 @@ import SolutionExperience from './SolutionExperience.vue';
             </div>
 
             <div class="info-product--image absolute top-0 left-0 w-full h-full z-0">
-                <img src="../../assets/images/info/group/path_group.png" alt="info-product"
+                <img src="~@/assets/images/info/group/path_group.png" alt="info-product"
                     class="absolute top-[15rem] left-[-50px] w-auto h-auto">
-                <img src="../../assets/images/info/group/ellipse.png" alt="info-product"
+                <img src="~@/assets/images/info/group/ellipse.png" alt="info-product"
                     class="absolute  top-[15rem] bottom-0 right-0 w-auto h-auto">
             </div>
 
@@ -77,7 +77,7 @@ import SolutionExperience from './SolutionExperience.vue';
                 </div>
 
                 <div class="relative flex justify-end">
-                    <img src="../../assets/images/info/group/path_group_01.png" alt="suntory-pepsico"
+                    <img src="~@/assets/images/info/group/path_group_01.png" alt="suntory-pepsico"
                         class="w-30 lg:w-[30rem] sm:w-[70%] mt-10 md:mt-0">
                 </div>
             </div>
@@ -166,20 +166,20 @@ import SolutionExperience from './SolutionExperience.vue';
                             class="w-14 h-14 flex justify-center items-center info-product-slider-button border-[#D3FCFD] rounded-full bg-transparent disabled:opacity-50"
                             @click="prevSlide"
                         >
-                            <img src="../../assets/images/icon/ArrowLeft.png" alt="">
+                            <img src="~@/assets/images/icon/ArrowLeft.png" alt="">
                         </button>
                         <button
                             :disabled="mainSlideIndex === slides.length - 1"
                             class="w-14 h-14 flex justify-center items-center rounded-full border-[#26AAE1] text-[#26AAE1] bg-[#A8F4FC] info-product-slider-button opacity-100 disabled:opacity-50"
                             @click="nextSlide"
                         >
-                            <img src="../../assets/images/icon/ArrowRight.png" alt="">
+                            <img src="~@/assets/images/icon/ArrowRight.png" alt="">
                         </button>
                     </div>
                 </div>
             </div>
             <div class="absolute xl:bottom-[5%] xl:left-[65%] xl:scale-100 md:scale-70 -translate-x-1/2 z-0 md:bottom-[-15%] md:left-[65%]">
-                <img src="../../assets/images/info/group/path_group_03.png" class="w-[30.19rem] h-[31.64rem]" alt="path_group">
+                <img src="~@/assets/images/info/group/path_group_03.png" class="w-[30.19rem] h-[31.64rem]" alt="path_group">
             </div>
         </div>
 

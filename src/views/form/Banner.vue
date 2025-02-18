@@ -12,6 +12,6 @@
              md:top-1/2 md:right-3 md:w-[500px] md:-translate-y-1/2 md:h-[60rem]
              lg:w-[50rem] 
              h-[10rem] sm:w-[80px] sm:top-2 sm:right-2 sm:transform-none           
-             object-contain z-10 opacity-40 brightness-540" src="../../assets/images/header/vector.png" alt="Vector">
+             object-contain z-10 opacity-40 brightness-540" src="~@/assets/images/header/vector.png" alt="Vector">
   </section>
 </template>
