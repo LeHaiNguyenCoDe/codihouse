@@ -117,19 +117,49 @@ import SolutionExperience from './SolutionExperience.vue';
         </div>
 
         <!-- Project Objective Slider -->
-        <div class="info-product-slider relative mt-30 h-[63rem] bg-gradient-blue">
+        <div class="info-product-slider relative mt-30 h-[63rem] bg-gradient-blue space-y-8">
             <div class="info-product--title flex items-center mx-auto pt-12 w-11/12">
                 <div class="info-product--title-square bg-brand-primary-light"></div>
                 <label class="font-medium text-title-regular color-white ml-2">Tổng quan dự án</label>
             </div>
-            <div class="info-product-slider--content w-11/12 mx-auto mt-10">
-                <div class="slider-main">
-                    <img src="../../assets/images/info/slider/image_slide_01.svg" alt="path_group" class="">
+            <div class="info-product-slider--content w-full mx-auto flex gap-3 overflow-hidden">
+                <div class="slider-main mx-1/24 w-[55%]">
+                    <img src="../../assets/images/info/slider/image_slide_01.svg" alt="path_group" class="w-[845px] h-fit">
                     <div>
-                        <label for="">01/ <span>Khơi gợi cảm xúc và tạo <br />
-                            ấn tượng mạnh mẽ</span></label>
+                        <div class="flex items-start w-7/12 gap-4">
+                            <span class="font-[Montserrat] font-normal text-32px leading-36px tracking-[5%] text-[#A8F4FC]">01/</span>
+                            <span class="font-[Montserrat] font-bold text-32px leading-36px tracking-[2%] text-white">Khơi gợi cảm xúc và tạo 
+                                ấn tượng mạnh mẽ</span>
+                        </div>
                     </div>
-                   
+                </div>
+                <div class="h-full grid grid-rows-2 gap-7 items-end">
+                    <div class="slider-small flex gap-7">
+                        <div class="slider-first-image">
+                            <img src="../../assets/images/info/slider/image_slide_02.svg" alt="path_group" class="w-[411px] h-[211px] object-cover">
+                            <div>
+                                <div class="flex items-start w-7/12 gap-4">
+                                    <span class="font-[Montserrat] font-normal text-32px leading-36px tracking-[5%] text-[#A8F4FC]">02/</span>
+                                    <!-- <span class="font-[Montserrat] font-bold text-32px leading-36px tracking-[2%] text-white">Khơi gợi cảm xúc và tạo 
+                                        ấn tượng mạnh mẽ</span> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-second-image">
+                            <img src="../../assets/images/info/slider/image_slide_03.svg" alt="path_group" class="w-[411px] h-[211px] object-cover">
+                            <div>
+                                <div class="flex items-start w-7/12 gap-4">
+                                    <span class="font-[Montserrat] font-normal text-32px leading-36px tracking-[5%] text-[#A8F4FC]">03/</span>
+                                    <!-- <span class="font-[Montserrat] font-bold text-32px leading-36px tracking-[2%] text-white">Khơi gợi cảm xúc và tạo 
+                                        ấn tượng mạnh mẽ</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 w-1/2 justify-end">
+                        <button class="w-14 h-14 flex justify-center items-center border-2 border-[#59CBEC] text-[#59CBEC] rounded-full bg-white/30 transition-[background,opacity] duration-300 text-aliceblue opacity-50" @click="prevSlide"> &#8592;</button>
+                        <button class="w-14 h-14 flex justify-center items-center border-2 border-[#59CBEC] rounded-full bg-white/30 transition-[background,opacity] duration-300 bg-white text-[#26AAE1] opacity-100" @click="nextSlide">&#8594;</button>
+                    </div>
                 </div>
             </div>
             <div class="absolute bottom-0 left-[60%] -translate-x-1/2">
