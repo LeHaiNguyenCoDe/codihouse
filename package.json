@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:normal": "NODE_ENV=production vite-ssg build --debug",
+    "build:normal": "NODE_ENV=production vite-ssg build",
     "preview": "vite preview",
-    "build": "NODE_ENV=production LANG=us vite-ssg build --debug -c vite.config.ts --ssrManifest",
+    "build": "NODE_ENV=production LANG=us vite-ssg build -c vite.config.ts --ssrManifest",
     "vercel": "vercel deploy"
   },
   "dependencies": {
