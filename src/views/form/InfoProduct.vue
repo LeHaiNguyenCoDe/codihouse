@@ -111,28 +111,74 @@ import SolutionExperience from './SolutionExperience.vue';
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
         <!-- Project Objective Slider -->
-        <div class="info-product-slider relative mt-30 h-[63rem] bg-gradient-blue">
-            <div class="info-product--title flex items-center mx-auto pt-12 w-11/12">
-                <div class="info-product--title-square bg-brand-primary-light"></div>
-                <label class="font-medium text-title-regular color-white ml-2">Tổng quan dự án</label>
-            </div>
-            <div class="info-product-slider--content w-11/12 mx-auto mt-10">
-                <div class="slider-main">
-                    <img src="../../assets/images/info/slider/image_slide_01.svg" alt="path_group" class="">
-                    <div>
-                        <label for="">01/ <span>Khơi gợi cảm xúc và tạo <br />
-                            ấn tượng mạnh mẽ</span></label>
-                    </div>
-                   
+        <div class="info-product-slider relative mt-30 xl:h-[63rem] md:h-[60vw] h-80vw bg-gradient-blue space-y-8">
+            <div class="info-product--title mx-auto pt-12 w-11/12 grid grid-cols-3">
+                <div class="xl:col-span-1 md:col-span-1 col-span-2 flex items-start">
+                    <div class="info-product--title-square bg-[#7BE2F6] mt-0.5"></div>
+                    <label class="font-medium text-title-regular color-white ml-2">Tổng quan dự án</label>
+                </div>
+                <div class="col-start-3 col-span-1 text-white text-[16px] -ml-4 w-11/12 xl:flex md:hidden hidden">
+                    Dự án thiết kế website mới cho Suntory Pepsico hướng đến việc "đánh thức mọi giác quan" của
+                    người dùng, mang đến một trải nghiệm số đầy cảm xúc và kết nối sâu sắc với tinh thần "Thổi hồn vào sự rực rỡ
                 </div>
             </div>
-            <div class="absolute bottom-0 left-[60%] -translate-x-1/2">
+            <div class="info-product-slider--content w-full mx-auto flex xl:gap-3 lg:gap-3 md:gap-3 gap-0 overflow-hidden relative z-10">
+                <!-- Ảnh đã qua (behind-main) -->
+                <div class="behind-main slider-small absolute xl:left-1% lg:left-1% md:left-1% left-[-3%] w-20px">
+                    <transition-group name="fade" tag="div" class="flex justify-end">
+                        <div v-if="behindSlide" @click="changeSlide(mainSlideIndex - 1)">
+                        <img :src="behindSlide.image" alt="Slide" class="xl:w-[411px] xl:h-[211px] object-cover md:w-[25vw] md:h-[15vw] w-25vw">
+                        </div>
+                    </transition-group>
+                </div>
+                <!-- Ảnh chính (slider-main) -->
+                <div class="slider-main mx-1/24 w-[55%]">
+                    <transition name="fade" mode="out-in">
+                        <img :src="mainSlide.image" :key="mainSlide.image" alt="Main Slide" class="xl:w-[845px] xl:h-[536px] md:w-[55vw] md:h-[35vw] w-55vw">
+                    </transition>
+                    <transition name="fade" mode="out-in" class="flex items-start xl:w-8/12 lg:w-full gap-4">
+                        <div class="font-[Montserrat] font-bold xl:text-32px lg:text-32px md:text-24px text-12px xl:leading-36px lg:leading-36px md:leading-36px leading-12pxtracking-[2%] text-white" :key="mainSlide.text">
+                            <span class="font-[Montserrat] font-normal xl:text-32px lg:text-32px md:text-24px text-12px xl:leading-36px lg:leading-36px md:leading-36px leading-12px tracking-[5%] text-[#A8F4FC]">{{ mainSlide.number }}/</span>
+                            <span class="font-bold">{{ mainSlide.text }}</span>
+                        </div>
+                    </transition>
+                </div>
+                    <!-- Ảnh nhỏ còn lại (slider-small) -->
+                <div class="h-full grid grid-rows-2 gap-7 items-end">
+                    <div class="slider-small">
+                        <transition-group name="fade" tag="div" class="flex xl:gap-7 md:gap-7 gap-2">
+                            <div v-for="(slide, index) in filteredSlides" :key="index" @click="changeSlide(mainSlideIndex + index + 1)">
+                                <img :src="slide.image" alt="Slide" class="xl:w-[411px] xl:h-[211px] object-cover md:w-[25vw] md:h-[15vw] w-25vw">
+                                <div class="font-[Montserrat] font-normal xl:text-32px lg:text-32px md:text-24px text-12px xl:leading-36px lg:leading-36px md:leading-36px leading-12px tracking-[5%] text-[#A8F4FC] h-10px">
+                                    <p>{{ slide.number }}/</p>
+                                </div>
+                            </div>
+                        </transition-group>
+                    </div>
+
+                    <!-- Nút điều hướng -->
+                    <div class="absolute xl:bottom-12% lg:bottom-15% md:bottom-20% xl:left-85% lg:left-80% md:left-75% bottom-22% left-70% flex gap-2 xl:scale-100 md:scale-70 scale-50">
+                        <button
+                            :disabled="mainSlideIndex === 0"
+                            class="w-14 h-14 flex justify-center items-center info-product-slider-button border-[#D3FCFD] rounded-full bg-transparent disabled:opacity-50"
+                            @click="prevSlide"
+                        >
+                            <img src="../../assets/images/icon/ArrowLeft.png" alt="">
+                        </button>
+                        <button
+                            :disabled="mainSlideIndex === slides.length - 1"
+                            class="w-14 h-14 flex justify-center items-center rounded-full border-[#26AAE1] text-[#26AAE1] bg-[#A8F4FC] info-product-slider-button opacity-100 disabled:opacity-50"
+                            @click="nextSlide"
+                        >
+                            <img src="../../assets/images/icon/ArrowRight.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute xl:bottom-[5%] xl:left-[65%] xl:scale-100 md:scale-70 -translate-x-1/2 z-0 md:bottom-[-15%] md:left-[65%]">
                 <img src="../../assets/images/info/group/path_group_03.png" class="w-[30.19rem] h-[31.64rem]" alt="path_group">
             </div>
         </div>
@@ -141,3 +187,46 @@ import SolutionExperience from './SolutionExperience.vue';
         <SolutionExperience />
     </section>
 </template>
+
+<script lang="ts">
+import { ref, computed } from 'vue';
+import image1 from '../../assets/images/info/slider/image_slide_01.svg';
+import image2 from '../../assets/images/info/slider/image_slide_02.svg';
+import image3 from '../../assets/images/info/slider/image_slide_03.svg';
+
+// Danh sách slide
+const slides = ref([
+  { image: image1, number: "01", text: 'Khơi gợi cảm xúc và tạo ấn tượng mạnh mẽ' },
+  { image: image2, number: "02", text: 'Tối ưu trải nghiệm người dùng (UX/UI)' },
+  { image: image3, number: "03", text: 'Tăng cường tương tác và kết nối với khách hàng' }
+]);
+
+// Chỉ số của slide chính
+const mainSlideIndex = ref(0);
+
+// Tính toán slide chính, slide đã qua và các slide còn lại
+const mainSlide = computed(() => slides.value[mainSlideIndex.value]); // Ảnh lớn
+const behindSlide = computed(() => slides.value[mainSlideIndex.value - 1] || null); // Ảnh đã qua
+const filteredSlides = computed(() => slides.value.slice(mainSlideIndex.value + 1)); // Ảnh còn lại
+
+// Chuyển sang ảnh tiếp theo
+const nextSlide = () => {
+  if (mainSlideIndex.value < slides.value.length - 1) {
+    mainSlideIndex.value += 1;
+  }
+};
+
+// Quay lại ảnh trước
+const prevSlide = () => {
+  if (mainSlideIndex.value > 0) {
+    mainSlideIndex.value -= 1;
+  }
+};
+
+// Thay đổi slide khi click vào ảnh nhỏ
+const changeSlide = (index: number) => {
+  if (index >= 0 && index < slides.value.length) {
+    mainSlideIndex.value = index;
+  }
+};
+</script>
