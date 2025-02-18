@@ -13,26 +13,26 @@
       <div class="col-span-3 col-start-2 relative">
         <!-- Left Phone -->
         <div class="left-phone" :style="{ transform: leftTranslate }">
-          <img :src="bgRight" alt="" class="w-[92%] h-[543px]" />
+          <img src="../../assets/images/info/mobile/group_mobile.svg" alt="" class="w-[92%] h-[543px]" />
         </div>
 
         <!-- Center Image -->
-        <img :src="bgCenter" alt="" class="bg-center" />
+        <img src="../../assets/images/info/group/path_group_02.svg" alt="" class="bg-center" />
 
         <!-- Vector -->
         <div class="vector">
-          <img :src="vector" alt="" />
+          <img src="../../assets/images/header/vector.png" alt="" />
         </div>
 
         <!-- Right Phone -->
         <div class="right-phone" :style="{ transform: rightTranslate }">
-          <img :src="bgLeft" alt="" class="w-[92%] h-[543px]" />
+          <img src="../../assets/images/info/mobile/group_mobile_02.svg" alt="" class="w-[92%] h-[543px]" />
         </div>
       </div>
     </div>
 
     <!-- Phần phát triển bền vững -->
-    <!-- <div class="sustainability__section" ref="sustainabilitySection">
+    <div class="sustainability__section h-[592px]" ref="sustainabilitySection">
       <h1 class="development">Phát Triển</h1>
       <h1 class="sustainable ">Bền Vững</h1>
       <img
@@ -41,19 +41,15 @@
           :src="bgCase"
           alt="Banner"
       />
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import bgRight from "@/assets/images/info/mobile/group_mobile.svg";
-import bgCenter from "@/assets/images/info/group/path_group_02.svg";
-import bgLeft from "@/assets/images/info/mobile/group_mobile_02.svg";
-// import bgCase from "@/assets/images/bg/case.svg";
 import arrow from "@/assets/images/info/icon/arrow.svg";
 import TitleSolution from "@/views/components/titleSolution.vue";
-import vector from '@/assets/images/header/vector.png';
+import bgCase from "@/assets/images/info/group/case.png";
 
 const sustainabilitySection = ref<HTMLElement | null>(null);
 const isVisible = ref(false);
@@ -69,7 +65,7 @@ const handleIntersection = (entries: IntersectionObserverEntry[]) => {
 onMounted(() => {
   const observer = new IntersectionObserver(handleIntersection, {
     root: null,
-    threshold: 0.3, // Khi 30% phần tử xuất hiện trên màn hình, kích hoạt hiệu ứng
+    threshold: 0.3,
   });
 
   if (sustainabilitySection.value) {
@@ -83,7 +79,7 @@ onUnmounted(() => {
 import { computed, onBeforeUnmount } from "vue";
 
 const y = ref(0);
-const screenWidth = ref(window.innerWidth);
+const screenWidth = ref(typeof window !== "undefined");
 let animationFrameId: number | null = null;
 
 const updateY = () => {
@@ -131,162 +127,3 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", updateScreenWidth);
 });
 </script>
-
-<style scoped>
-.solution--experience {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(0deg, #A1CC95 2.43%, #26AAE1 97.48%);
-  position: relative;
-  overflow: hidden;
-  min-height: 947px;
-  max-height: 947px;
-  @media (max-width: 1024px) {
-    min-height: 800px;
-  }
-  @media (max-width: 767px) {
-    min-height: 700px;
-  }
-}
-.space-y {
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-  @media (max-width: 1024px) {
-    gap: 16px;
-  }
-}
-.vector {
-  position: absolute;
-  top: 33%;
-  left: 45%;
-  z-index: 0;
-  @media (max-width: 1024px) {
-    transform: scale(0.7);
-    top: 25%;
-    left: 25%;
-  }
-  @media (max-width: 820px) {
-    transform: scale(0.45);
-    top: 20%;
-    left: 18%;
-  }
-  @media (max-width: 767px) {
-    transform: scale(0.2);
-    top: -5%;
-    left: -50%;
-  }
-}
-.bg-center {
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 1;
-}
-.development {
-  position: absolute;
-  font-family: Montserrat;
-  font-size: 56px;
-  line-height: 80px;
-  letter-spacing: 0%;
-  top: 44.5%;
-  left: 24.5%;
-  transform: translate(-50%, -50%); 
-  color: #3882C4;
-  background: transparent;
-  @media (max-width: 1024px) {
-    transform: scale(0.7);
-    top: 31%;
-    left: 10%;
-  }
-  @media (max-width: 767px) {
-    transform: scale(0.3);
-    top: 5%;
-    left: -12%;
-  }
-}
-.sustainable {
-  position: absolute;
-  font-family: Montserrat;
-  font-size: 56px;
-  line-height: 80px;
-  letter-spacing: 0%;
-  top: 44.5%;
-  right: 4%;
-  transform: translate(-50%, -50%); 
-  color: #3882C4;
-  background: transparent;
-  @media (max-width: 1024px) {
-    transform: scale(0.7);
-    top: 31%;
-    right: 10%;
-  }
-  @media (max-width: 767px) {
-    transform: scale(0.3);
-    top: 5%;
-    right: -12%;
-  }
-}
-.sustainability__section {
-  position: relative;
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.left-phone {
-  position: absolute;
-  top: 31%;
-  left: -22%;
-  z-index: 2;
-  @media (max-width: 1024px) {
-    transform: scale(0.7);
-    top: 26.5%;
-    left: -30%;
-  }
-  @media (max-width: 820px) {
-    transform: scale(0.7);
-    top: 25%;
-    left: -40%;
-  }
-  @media (max-width: 767px) {
-    top: 18%;
-    left: -65%;
-  }
-}
-.right-phone {
-  position: absolute;
-  bottom: 18%;
-  right: -22%;
-  z-index: 2;
-  @media (max-width: 1024px) {
-    transform: scale(0.7);
-    bottom: 14%;
-    right: -30%;
-  }
-  @media (max-width: 820px) {
-    transform: scale(0.7);
-    bottom: 8%;
-    right: -40%;
-  }
-  @media (max-width: 767px) {
-    top: 35%;
-    right: -65%;
-  }
-}
-.main-banner {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  clip-path: circle(0% at center);
-  transition: clip-path 4s ease-out;
-}
-.animated-circle {
-  clip-path: circle(100% at center);
-}
-</style>
