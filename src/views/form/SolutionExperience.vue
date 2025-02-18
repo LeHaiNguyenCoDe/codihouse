@@ -32,7 +32,7 @@
     </div>
 
     <!-- Phần phát triển bền vững -->
-    <div class="sustainability__section" ref="sustainabilitySection">
+    <!-- <div class="sustainability__section" ref="sustainabilitySection">
       <h1 class="development">Phát Triển</h1>
       <h1 class="sustainable ">Bền Vững</h1>
       <img
@@ -41,19 +41,19 @@
           :src="bgCase"
           alt="Banner"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import bgRight from "@/assets/images/bg/group_mobile.svg";
-import bgCenter from "@/assets/images/bg/group_bg_03.svg";
-import bgLeft from "@/assets/images/bg/group_mobile_02.svg";
-import bgCase from "@/assets/images/bg/case.svg";
-import arrow from "@/assets/images/icon/arrow.svg";
+import bgRight from "@/assets/images/info/mobile/group_mobile.svg";
+import bgCenter from "@/assets/images/info/group/path_group_02.svg";
+import bgLeft from "@/assets/images/info/mobile/group_mobile_02.svg";
+// import bgCase from "@/assets/images/bg/case.svg";
+import arrow from "@/assets/images/info/icon/arrow.svg";
 import TitleSolution from "@/views/components/titleSolution.vue";
-import vector from '@/assets/images/header/Vector.svg';
+import vector from '@/assets/images/header/vector.png';
 
 const sustainabilitySection = ref<HTMLElement | null>(null);
 const isVisible = ref(false);

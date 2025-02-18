@@ -1,0 +1,26 @@
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-manrope { font-family: 'manrope', sans-serif; }
+.font-bold { font-weight: bold; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+.font-regular { font-weight: normal; }
+
+/* Headlines */
+
+.text-hero { font-size: 64px; font-weight: bold; }
+.text-h1 { font-size: 48px; font-weight: bold; }
+.text-h2 { font-size: 40px; font-weight: bold; }
+.text-h3 { font-size: 36px; font-weight: bold; }
+.text-h4 { font-size: 32px; font-weight: bold; }
+
+/* Title */
+.text-title-large { font-size: 24px}
+.text-title-small { font-size: 20px }
+.text-title-regular { font-size: 18px; font-weight: bold; line-height: 18px;}
+/* Body */
+
+.text-body-large { font-size: 18px; }
+.text-body-medium { font-size: 16px; }
+.text-body-regular { font-size: 14px; }
+
+.info-product--title-square {inline-size: 12px; block-size: 12px;}

@@ -1,6 +1,6 @@
 import { createI18n, I18n } from 'vue-i18n';
-import vi from './../lang/vi';
-import en from './../lang/en';
+import vi from '@/lang/vi';
+import en from '@/lang/en';
 
 
 const i18n: I18n = createI18n({

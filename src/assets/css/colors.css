@@ -1,0 +1,53 @@
+/* Brand Colors */
+.bg-brand-darkest { background-color: #021227; }
+.bg-brand-darker { background-color: #0C4782; }
+.bg-brand-dark { background-color: #1364A2; }
+.bg-brand-primary { background-color: #1B85C1; }
+.bg-brand-primary-light { background-color: #26AAE1; }
+
+.bg-brand-light { background-color: #59CBEC; }
+.bg-brand-lighter { background-color: #7BE2F6; }
+.bg-brand-lightest { background-color: #A8F4FC; }
+.bg-brand-lightests { background-color: #D3FCFD; }
+
+/* Secondary Colors */
+.bg-secondary-blue { background-color: #124B96; }
+.bg-secondary-green { background-color: #13B282; }
+
+/* Gradient */
+.bg-gradient {
+    background: linear-gradient(90deg, #A1CC95 0%, #26AAE1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    display: inline-block;
+}
+
+.bg-gradient-blue {background: linear-gradient(180deg, #3882C4 0%, #26AAE1 100%);}
+    
+
+/* Function Colors */
+
+.bg-function-orange { background-color: #F7921E; }
+.bg-function-dark-red { background-color: #CB2529; }
+
+/* Neutral Colors */
+
+.bg-neutral-white { background-color: #FFFFFF; }
+.bg-neutral-lightest { background-color: #F4F5F6; }
+.bg-neutral-lighter { background-color: #E6E8EC; }
+.bg-neutral-light { background-color: #B1B5C3; }
+.bg-neutral-dark { background-color: #777E91; }
+.bg-neutral-darker { background-color: #353945; }
+.bg-neutral-black { background-color: #141416; }
+
+
+.color-white {color: #FFFFFF; }
+.color-lightest { color: #F4F5F6; }
+.color-lighter { color: #E6E8EC; }
+.color-light { color: #B1B5C3; }
+.color-darks { color: #777E91; }
+.color-darker {color: #353945; }
+.color-black { color: #141416; }
+.color-blues { color: #3882C4; }
