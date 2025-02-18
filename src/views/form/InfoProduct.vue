@@ -43,7 +43,7 @@ import SolutionExperience from './SolutionExperience.vue';
                 <img src="~@/assets/images/info/group/path_group.png" alt="info-product"
                     class="absolute top-[15rem] left-[-50px] w-auto h-auto">
                 <img src="~@/assets/images/info/group/ellipse.png" alt="info-product"
-                    class="absolute  top-[15rem] bottom-0 right-0 w-auto h-auto">
+                    class="absolute xl:top-[15rem] md:top-[15rem] top-0 bottom- md::bottom-0 right-0 w-auto h-auto">
             </div>
 
             <div class="project-video relative flex items-center justify-center mt-15 z-10">
@@ -59,13 +59,13 @@ import SolutionExperience from './SolutionExperience.vue';
         <div class="pt-20 relative w-full">
             <div class="mx-auto w-11/12 flex flex-row items-center md:items-start">
                 <!-- Cột trái: Nội dung văn bản -->
-                <div class="w-full md:w-1/2 relative z-10">
+                <div class="xl:w-1/2 lg:w-full md:w-2/3 w-full relative z-10">
                     <div class="info-product--title flex items-center">
                         <div class="info-product--title-square bg-brand-primary-light"></div>
                         <label class="font-medium text-title-regular color-darks ml-2">Về Suntory Pepsico</label>
                     </div>
                     <div
-                        class="text-[8px] md:text-[14px] lg:text-[24px] font-semibold color-darks mt-9 leading-relaxed">
+                        class="text-[8px] md:text-[14px] lg:text-[18px] xl:text-[24px] font-semibold color-darks mt-9 leading-relaxed">
                         <span class="font-bold color-blues">Suntory Pepsico</span> là một trong những doanh<br>
                         nghiệp hàng đầu trong ngành F&B tại Việt<br>
                         Nam, đồng thời tiên phong trong các hoạt<br>
@@ -76,37 +76,37 @@ import SolutionExperience from './SolutionExperience.vue';
                     </div>
                 </div>
 
-                <div class="relative flex justify-end">
+                <div class="relative flex justify-end xl:scale-100 md:scale-80 z-10 xl:mt-4 md:mt-4">
                     <img src="~@/assets/images/info/group/path_group_01.png" alt="suntory-pepsico"
-                        class="w-30 lg:w-[30rem] sm:w-[70%] mt-10 md:mt-0">
+                        class="w-30 lg:w-[25rem] md:w-[20rem] sm:w-[70%] mt-10 md:mt-0">
                 </div>
             </div>
 
             <!-- Suntory Number Section -->
-            <div class="suntory--number mt-16 relative w-full bg-white font-manrope">
+            <div class="suntory--number xl:mt-0 md:mt-0 mt-16 relative w-full bg-white font-manrope z-0">
                 <div class="mx-auto w-11/12 grid grid-cols-4 gap-8 md:gap-12 relative">
                     <div class="col-span-1">
                         <p class="lg:text-[96px] text-[50px] font-bold text-[#26AAE1] m-0">06</p>
-                        <p class="lg:text-[24px] text-[16px] font-bold text-[#26AAE1]">Nhà máy sản xuất</p>
-                        <p class="color-darks">Trải dài khắp Việt Nam</p>
+                        <p class="lg:text-[24px] md:text-[16px] text-[12px] font-bold text-[#26AAE1]">Nhà máy sản xuất</p>
+                        <p class="color-darks lg:text-[24px] md:text-[16px] text-[12px]">Trải dài khắp Việt Nam</p>
                     </div>
                     <div class="col-span-1">
                         <p class="lg:text-[96px] text-[50px] font-bold text-[#26AAE1] m-0">13</p>
-                        <p class="lg:text-[24px] text-[16px] font-bold text-[#26AAE1]">Thương hiệu hàng đầu</p>
-                        <p class="color-darks">Phục vụ người Việt</p>
+                        <p class="lg:text-[24px] md:text-[16px] text-[12px] font-bold text-[#26AAE1]">Thương hiệu hàng đầu</p>
+                        <p class="color-darks lg:text-[24px] md:text-[16px] text-[12px]">Phục vụ người Việt</p>
                     </div>
                     <div class="col-span-1"></div>
                     <!-- Ô 4: Văn phòng -->
                     <div class="col-span-1">
                         <p class="lg:text-[96px] text-[50px] font-bold text-[#26AAE1] m-0">05</p>
-                        <p class="lg:text-[24px] text-[16px] font-bold text-[#26AAE1]">Văn phòng</p>
-                        <p class="color-darks">Tại tất cả các thành phố lớn</p>
+                        <p class="lg:text-[24px] md:text-[16px] text-[12px] font-bold text-[#26AAE1]">Văn phòng</p>
+                        <p class="color-darks lg:text-[24px] md:text-[16px] text-[12px]">Tại tất cả các thành phố lớn</p>
                     </div>
                     <div class="col-span-2"></div>
                     <div class="col-span-2">
                         <p class="sm:text-[64px] text-[50px] md:text-[80px] font-bold text-[#26AAE1] m-0">Top 1</p>
                         <p class="sm:text-[24px] font-bold text-[#26AAE1]">Công ty đồ uống</p>
-                        <p class="sm:text-[24px] text-[16px] color-darks">Uy tín tại Việt Nam (Năm 2019-2024, theo
+                        <p class="lg:text-[24px] md:text-[16px] text-[12px] color-darks">Uy tín tại Việt Nam (Năm 2019-2024, theo
                             Vietnam Report)</p>
                     </div>
                 </div>

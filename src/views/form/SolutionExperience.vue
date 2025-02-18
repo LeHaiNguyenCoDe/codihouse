@@ -32,9 +32,9 @@
     </div>
 
     <!-- Phần phát triển bền vững -->
-    <div class="sustainability__section h-[592px]" ref="sustainabilitySection">
-      <h1 class="development">Phát Triển</h1>
-      <h1 class="sustainable ">Bền Vững</h1>
+    <div class="sustainability__section h-fit" ref="sustainabilitySection">
+      <h1 class="absolute xl:left-[14%] lg:left-[10%] md:left-[6%] left-[-10%] text-[62px] tracking-[-0.07em] text-[#3882C4] xl:scale-100 lg:scale-70 md:scale-50 scale-30">Phát Triển</h1>
+      <h1 class="absolute xl:right-[14%] lg:right-[10%] md:right-[6%] right-[-10%] text-[62px] tracking-[-0.07em] text-[#3882C4] xl:scale-100 lg:scale-70 md:scale-50 scale-30">Bền Vững</h1>
       <img
           class="main-banner"
           :class="{ 'animated-circle': isVisible }"

@@ -1,10 +1,10 @@
 <template>
-  <section class="relative w-full lg:h-[720px] sm:h-[720px] sm:h-[300px]">
+  <section class="relative w-full h-fit">
     <!-- Banner Image -->
     <div class="w-full h-full">
       <img class="w-full lg:h-full object-cover" src="~@/assets/images/header/header_banner.png" alt="Banner">
       <!-- Banner /Rectangle -->
-      <img class="absolute bottom-0 left-0 w-full z-10 w-full" src="~@/assets/images/header/Rectangle.png"
+      <img class="absolute bottom-0 left-0 w-full z-10" src="~@/assets/images/header/Rectangle.png"
         alt="Rectangle">
     </div>
     <!-- Banner Vector -->
