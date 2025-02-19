@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import white_bg from "@/assets/images/bg/white_bg.svg"
+import white_bg from "@/assets/images/header/rectangle.png";
 import { style } from 'motion/react-client';
 
 const props = defineProps({
