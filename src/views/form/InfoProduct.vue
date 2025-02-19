@@ -198,27 +198,28 @@
                     textStroke="3px #26AAE1" />
             </div>
 
-            <div class="info__product--sincere-content">
+            <div class="info__product--sincere-content relative">
                 <div class="mx-auto w-11/12 grid grid-cols-2 gap-6 md:gap-6 absolute z-10 items-end w-full">
                     <div class="col-span-1 grid items-end justify-end"> <img :src="Ellipse_1"
                             class="w-[150px] lg:w-[496px] lg:h-[496px]" alt="iconv-lite" /></div>
-                    <div class="col-span-1"> <img :src="iconvLite" class="w-[90px] lg:w-[281.46px] lg:h-[281.46px]"
+                    <div class="col-span-1 absolute xl:top-1/5 lg:top-[2%] md:top-9/12 top-1/5 xl:left-1/2 lg:left-[40%] md:left-7/12 left-1/2 z-0"> <img :src="iconvLite" class="w-[90px] lg:w-[281.46px] lg:h-[281.46px]"
                             alt="iconv-lite" /></div>
                 </div>
                 <div class="mx-auto w-11/12 grid grid-cols-3 gap-6 md:gap-6 relative">
-                    <div class="col-span-1"><img :src="group_01" class="w-full" alt="iconv-lite" /></div>
+                    <div class="col-span-1"><img :src="group_01" class="w-full relative z-10" alt="iconv-lite" /></div>
                     <div class="col-span-1"></div>
-                    <div class="col-span-1"><img :src="group_02" class="w-full" alt="iconv-lite" /></div>
+                    <div class="col-span-1"><img :src="group_02" class="w-full relative z-10" alt="iconv-lite" /></div>
                     <div class="col-span-1"></div>
-                    <div class="col-span-1"><img :src="group_03" class="w-full" alt="iconv-lite" /></div>
-                    <div class="col-span-1"><img :src="group_04" class="w-full" alt="iconv-lite" /></div>
+                    <div class="col-span-1"><img :src="group_03" class="w-full relative z-10" alt="iconv-lite" /></div>
+                    <div class="col-span-1"><img :src="group_04" class="w-full relative z-10" alt="iconv-lite" /></div>
                 </div>
             </div>
 
             <!-- Split layout -->
             <div class="relative w-full mt-5">
                 <div class="absolute inset-0 flex justify-center items-center">
-                    <img src="@/assets/images/header/vector.png" class="opacity-40 w-[150px] lg:w-[40rem]" alt="iconv-lite" />
+                    <img src="@/assets/images/header/vector.png" class="opacity-40 w-[150px] lg:w-[40rem]"
+                        alt="iconv-lite" />
                 </div>
 
                 <div class="mx-auto w-11/12 grid grid-cols-2 gap-2 relative z-10">
@@ -240,34 +241,47 @@
         </div>
 
         <!-- Testimonial Card -->
-        <div class="info__product--testimonial-card flex justify-center item-center bg-red mt-20 w-full">
-            <div class="absolute container mx-auto w-full bg-gradient-smart h-[50.69rem]">
-                <img src="@/assets/images/info/card/card_2085665765.png" 
-                class="absolute w-[40vw] lg:w-auto max-w-[40rem] min-w-[10rem] -top-[5vw] left-[10vw]" 
-                alt="iconv-lite" />
+        <div
+            class="info__product--testimonial-card flex justify-center items-center bg-[linear-gradient(0deg,#3882C4_0.03%,#26AAE1_100.03%)] mt-20 w-full relative">
+            <!-- Container chính của hình ảnh và nội dung -->
+            <div class="container mx-auto w-full bg-gradient-smart xl:h-[50.69rem] lg:h-[50.96rem] md:h-[40rem] h-[21rem] relative">
+                <!-- Hình ảnh card_2085665765 -->
+                <img src="@/assets/images/info/card/card_2085665765.png"
+                    class="absolute w-[40vw] lg:w-auto max-w-[40rem] min-w-[10rem] -top-[5vw] left-[10vw]"
+                    alt="iconv-lite" />
+
+                <!-- Hình ảnh card_timeline -->
                 <img src="@/assets/images/info/card/card_timeline.png"
                     class="absolute top-20 right-0 w-[40vw] transform-[50%] max-w-[40rem] min-w-[10rem]"
                     alt="iconv-lite" />
-                <div class="absolute text-white w-[40vw] max-w-[40rem] min-w-[10rem] 
-                            top-1/2 left-1/2 -translate-x-2/6 -translate-y-1/6 text-left z-20">
-                    <p>Hệ thống điều hướng được thiết kế trực <br>
+
+                <!-- Nội dung -->
+                <div class="absolute text-white xl:w-[40vw] md:w-full max-w-[40rem] min-w-[10rem] xl:top-1/2 xl:top-1/2 lg:top-[45%] md:top-1/3 top-[40%] xl:left-1/2 lg:left-[60%] md:left-[58%] left-[43%] -translate-x-2/6 -translate-y-1/6 text-left z-20">    
+                    <img :src="Shape_brand" alt="" class="xl:scale-100 md:scale-90 scale-70">
+                    <p class="font-[Montserrat] font-bold xl:text-[32px] md:text-[24px] text-12px xl:leading-[36px] md:leading-[36px] leading-[24px] tracking-[2%] whitespace-nowrap">Điều Hướng Hhông Minh</p>
+                    <p class="font-[Montserrat] font-normal xl:text-[16px] md:text-14px text-6px xl:leading-[24px] md:leading-[24px] leading-[10px] tracking-[0%]">Hệ thống điều hướng được thiết kế trực <br>
                         quan, dễ sử dụng, giúp khách hàng nhanh <br>
                         chóng tìm thấy thông tin về sản phẩm, tin <br>
                         tức.
                     </p>
-                    <p>Sử dụng CTA rõ ràng, hấp dẫn, hướng dẫn <br>
+                    <p class="font-[Montserrat] font-normal xl:text-[16px] md:text-14px text-6px xl:leading-[24px] md:leading-[24px] leading-[10px] tracking-[0%]">Sử dụng CTA rõ ràng, hấp dẫn, hướng dẫn <br>
                         người dùng thực hiện hành động mong <br>
                         muốn.
                     </p>
                 </div>
-                <img src="@/assets/images/info/card/card.png" 
-                    class="absolute w-[30vw] lg:w-auto max-w-[40rem] min-w-[10rem] top-[25vw] md:top-[15vw] max-top-[40rem] min-top-[10rem] lef-0" 
+
+                <!-- Hình ảnh card.png -->
+                <img src="@/assets/images/info/card/card.png"
+                    class="absolute w-[30vw] lg:w-auto max-w-[40rem] min-w-[8rem] xl:top-[15vw] md:top-[25vw] top-[25vw] max-top-[40rem] min-top-[10rem] left-0"
                     alt="iconv-lite" />
-                <img src="@/assets/images/info/card/card_2085665767.png" 
-                    class="absolute w-[30vw] lg:w-auto max-w-[40rem] min-w-[10rem] top-[50vw] md:top-[25vw] top-[24vw] max-top-[40rem] min-top-[10rem] right-0" 
+
+                <!-- Hình ảnh card_2085665767 -->
+                <img src="@/assets/images/info/card/card_2085665767.png"
+                    class="absolute w-[30vw] lg:w-auto max-w-[40rem] min-w-[8rem] md:top-[50vw] xl:top-[35vw] top-[50vw] max-top-[40rem] min-top-[10rem] xl:right-1/10 md:right-0 right-0"
                     alt="iconv-lite" />
             </div>
         </div>
+        <MobileSection />
     </section>
 </template>
 
@@ -284,6 +298,8 @@ import group_03 from "@/assets/images/info/group/group_1000004256.png"
 import group_04 from "@/assets/images/info/group/group_1000004257.png"
 import SolutionExperience from './SolutionExperience.vue';
 import TitleSolution from "../components/titleSolution.vue";
+import MobileSection from './MobileSection.vue';
+import Shape_brand from "@/assets/images/icon/Shape_brand.svg"
 
 
 
