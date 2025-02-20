@@ -1,15 +1,15 @@
 <template>
-	<div class="solution--experience bg-gradient-01 pb-4">
+	<div class="solution--experience bg-gradient-01 pb-4 min-h-[947px] max-h-[947px]">
 		<div class="-my-10">
 			<img :src="arrow" alt="arrow icon" class="block mx-auto mb-5">
 			<span class="text-[18px] font-sans font-medium text-white">Giải pháp thiết kế</span>
 		</div>
 		<title-solution title="Trải Nghiệm Rực Rỡ"
 			content="Tạo ra trải nghiệm thị giác và tương tác đầy hứng khởi, phản ánh tinh thần đúng tinh thần thương hiệu. Chúng tôi chú trọng vào thiết kế giao diện với bảng màu tươi sáng, hình ảnh và video chất lượng cao, cùng hiệu ứng chuyển động mượt mà để thu hút người dùng, khơi gợi cảm xúc tích cực và tạo ấn tượng mạnh mẽ ngay từ lần đầu truy cập."
-			number="01" /> 
+			number="01"  maskImage=""/> 
 
 	</div>
-	<div class="space-y">
+	<div class="space-y bg-gradient-mobilephone">
 		<div class="grid grid-cols-5 -mt-1/5">
 			<div class="col-span-3 col-start-2 relative">
 				<div class="left-phone" :style="{ transform: leftTranslate }">

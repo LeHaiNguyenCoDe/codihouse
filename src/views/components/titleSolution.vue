@@ -1,8 +1,8 @@
 <template>
-  <div class="solution--experience-title" :style="{'-webkit-text-stroke': textStroke }">
+  <div class="solution--experience-title" :style="{'-webkit-text-stroke': textStroke, '-webkit-mask-image':'linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%)'}">
     <h1>{{ number }}</h1>
   </div>
-  <div class="solution--experience-contents">
+  <div class="solution--experience-contents magin-block relative":style="{ marginBlock: my }">
     <h1
         class="font-sans font-extrabold text-[72px] leading-[80px] tracking-[3%] text-center"
         :style="{ color: titleColor }"
@@ -15,9 +15,8 @@
     >
       {{ content }}
     </p>
-    <div class=" white-space " :style="{ display: whiteSpace }"></div>
   </div>
-  <img :src="white_bg" alt="" class="w-screen absolute bottom-0">
+  <div><img :src="white_bg" alt="" class="absolute bottom-0 left-0 w-full"></div>
 </template>
 
 <script setup lang="ts">
@@ -58,10 +57,15 @@ const props = defineProps({
     required: false,
     default: '5px white'
   },
-  whiteSpace: {
+  maskImage: {
     type: String,
     required: false,
-    default: "block",
+    default: 'linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%)'
+  },
+  my: {
+    type: String,
+    required: false,
+    default: '15%',
   }
 });
 </script>
@@ -133,5 +137,9 @@ const props = defineProps({
     font-size: 28px;
   }
 }
-
+@media (max-width: 1024px) {
+  .magin-block{
+    margin-block: 30px;
+  }
+}
 </style>

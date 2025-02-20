@@ -1,5 +1,5 @@
 <template>
-    <section class="relative w-full h-fit flex items-center justify-center mt-96 overflow-hidden">
+    <section class="relative w-full xl:h-fit md:h-fit h-[30rem] flex items-center justify-center overflow-hidden">
       <div class="flex relative xl:scale-100 lg:scale-90 md:scale-80 scale-50">
         <div><img :src="vector" alt="big" class="absolute top-[15%] left-[-5%] z-0"></div>
         <div><img :src="big_circle" alt="big" class="absolute top-[-10%] left-1/4 z-0"></div>
