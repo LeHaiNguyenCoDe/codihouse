@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full h-fit">
+  <section ref="bannerRef" class="relative w-full h-fit opacity-0">
     <!-- Banner Image -->
     <div class="w-full h-full">
       <img class="w-full lg:h-full object-cover" src="~@/assets/images/header/header_banner.png" alt="Banner">
@@ -12,3 +12,9 @@
              object-contain z-10 opacity-40 brightness-540" src="~@/assets/images/header/vector.png" alt="Vector">
   </section>
 </template>
+
+<script setup lang="ts">
+import { useBannerAnimation } from "@/composables/useBannerAnimation";
+
+const { bannerRef } = useBannerAnimation();
+</script>

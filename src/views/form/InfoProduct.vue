@@ -1,110 +1,50 @@
 <template>
     <section class="info-product--container font-montserrat pt-10 relative">
         <!-- Info-product -->
-        <div class="info-product--content">
-            <div class="relative z-10 mx-auto w-11/12">
-                <div class="info-product--title flex items-center">
-                    <div class="info-product--title-square bg-brand-primary-light"></div>
-                    <label class="font-medium text-title-regular color-darks ml-2">Tổng quan dự án</label>
-                </div>
-                <div
-                    class="xl:text-[64px] lg:text-[48px] md:text-[36px] text-[18px] font-bold text-title-bold color-darks mt-9">
-                    <span class="font-bold bg-gradient">Đổi mới</span> giao diện website,
-                </div>
-                <div
-                    class="xl:text-[64px] lg:text-[48px] md:text-[36px] text-[18px] font-bold text-title-bold color-darks mt-4">
-                    lan tỏa <span class="font-bold bg-gradient">sự rực rỡ</span>
-                    <img src="../../assets/images/info/water-surface.png" alt="water" class="me-3 pl-6 xl:w-auto md:w-10vw w-10vw"> và nâng cao
-                </div>
-                <div
-                    class="xl:text-[64px] lg:text-[48px] md:text-[36px] text-[18px] font-bold text-title-bold color-darks mt-4">
-                    hiệu quả tương tác.
-                </div>
-                <div class="info-product--description-text w-full flex justify-end">
-                    <div class="w-1/2 xl:text-[16px] md:text-[10px] text-8px color-darks xl:mt-10 md:mt-6 tracking-wide">
-                        <p>
-                            Dự án thiết kế website với giao diện mới mang đến một diện mạo tươi mới, <br>
-                            hiện đại, thể hiện tinh thần "Thổi hồn vào sự rực rỡ của cuộc sống" và tối ưu<br>
-                            hóa hiệu quả tương tác với khách hàng. Website được xây dựng để trở thành<br>
-                            một công cụ mạnh mẽ hỗ trợ các hoạt động marketing và kinh doanh, đồng <br>
-                            thời mang đến trải nghiệm số vượt trội.<br>
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <ProjectOverview 
+            title="Tổng quan dự án"
+            :content="[
+                { text: '<span class=\'font-bold bg-gradient\'>Đổi mới</span> giao diện website,' },
+                { text: 'lan tỏa <span class=\'font-bold bg-gradient\'>sự rực rỡ</span> <img class=\'w-[12vw] lg:w-auto\' src=\'' + MEDIA.images.waterSurface + '\' alt=\'Water Image\' /> và nâng cao' },
+                { text: 'hiệu quả tương tác.' }
+            ]"
+            description="Dự án thiết kế website với giao diện mới mang đến một diện mạo tươi mới, <br>
+                hiện đại, thể hiện tinh thần 'Thổi hồn vào sự rực rỡ của cuộc sống' và tối ưu<br>
+                hóa hiệu quả tương tác với khách hàng. Website được xây dựng để trở thành<br>
+                một công cụ mạnh mẽ hỗ trợ các hoạt động marketing và kinh doanh, đồng <br>
+                thời mang đến trải nghiệm số vượt trội.<br>"
+            :backgroundImages="[
+                { src: MEDIA.images.pathGroup, alt: 'info-product', class: 'absolute xl:top-[15rem] md:top-20rem top-20rem left-[-50px] xl:w-auto md:w-auto w-70vw h-auto' },
+                { src: MEDIA.images.ellipse, alt: 'info-product', class: 'absolute xl:top-[15rem] md:top-20rem top-20rem bottom-0 right-0 xl:w-auto md:w-auto w-50vw h-auto' }
+            ]"
+            :videoSrc="MEDIA.videos.showreel"
+            />
 
-            <div class="info-product--image absolute top-0 left-0 w-full h-full z-0">
-                <img src="../../assets/images/info/group/path_group.png" alt="info-product"
-                    class="absolute xl:top-[15rem] md:top-20rem top-20rem left-[-50px] xl:w-auto md:w-auto w-70vw h-auto">
-                <img src="../../assets/images/info/group/ellipse.png" alt="info-product"
-                    class="absolute xl:top-[15rem] md:top-20rem top-20rem bottom-0 right-0 xl:w-auto md:w-auto w-50vw h-auto">
-            </div>
-
-            <div class="project-video relative flex items-center justify-center mt-15 z-10">
-                <div class="project-video-group container flex items-center justify-center">
-                    <video class="w-full lg:h-[522px] sm:h-full object-cover" autoplay loop muted playsinline>
-                        <source src="@/assets/videos/Showreel_-Web-gallery-[remix].mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
 
         <!-- Suntory Pepsico -->
-        <div class="relative w-full pt-20 ">
-            <div class="mx-auto w-11/12 flex flex-row items-center md:items-start">
-                <!-- Cột trái: Nội dung văn bản -->
-                <div class="w-full md:w-1/2 relative z-10">
-                    <div class="info-product--title flex items-center">
-                        <div class="info-product--title-square bg-brand-primary-light"></div>
-                        <label class="font-medium text-title-regular color-darks ml-2">Về Suntory Pepsico</label>
-                    </div>
-                    <div
-                        class="text-[8px] md:text-[13px] lg:text-[18px] font-semibold color-darks mt-9 leading-relaxed">
-                        <span class="font-bold color-blues">Suntory Pepsico</span> là một trong những doanh<br>
+        <SuntoryPepsicoInfo 
+            title="Về Suntory Pepsico"
+            companyName="Suntory Pepsico"
+            description="
+            là một trong những doanh<br>
                         nghiệp hàng đầu trong ngành F&B tại Việt<br>
                         Nam, đồng thời tiên phong trong các hoạt<br>
                         động phát triển bền vững. Công ty luôn nỗ<br>
                         lực mang đến những sản phẩm chất lượng<br>
                         cao, đồng thời góp phần xây dựng một tương<br>
                         lai tốt đẹp hơn cho cộng đồng và môi trường.
-                    </div>
-                </div>
-
-                <div class="relative flex justify-end">
-                    <img src="../../assets/images/info/group/path_group_01.png" alt="suntory-pepsico"
-                        class="w-30 lg:w-[25rem] sm:w-[70%] xl:mt-0 md:mt-0 mt-10">
-                </div>
-            </div>
-
-            <!-- Suntory Number Section -->
-            <div class="suntory--number relative w-full bg-white font-manrope">
-                <div class="mx-auto w-11/12 grid grid-cols-4 gap-8 md:gap-12 relative">
-                    <div class="col-span-1">
-                        <p class="lg:text-[96px] text-[50px] font-bold text-[#26AAE1] m-0">06</p>
-                        <p class="lg:text-[24px] md:text-[16px] text-[12px] font-bold text-[#26AAE1]">Nhà máy sản xuất</p>
-                        <p class="color-darks xl:text-18px md:text-12px text-10px">Trải dài khắp Việt Nam</p>
-                    </div>
-                    <div class="col-span-1">
-                        <p class="lg:text-[96px] text-[50px] font-bold text-[#26AAE1] m-0">13</p>
-                        <p class="lg:text-[24px] md:text-[16px] text-[12px] font-bold text-[#26AAE1]">Thương hiệu hàng đầu</p>
-                        <p class="color-darks xl:text-18px md:text-12px text-10px">Phục vụ người Việt</p>
-                    </div>
-                    <div class="col-span-1"></div>
-                    <div class="col-span-1">
-                        <p class="lg:text-[96px] text-[50px] font-bold text-[#26AAE1] m-0">05</p>
-                        <p class="lg:text-[24px] md:text-[16px] text-[12px] font-bold text-[#26AAE1]">Văn phòng</p>
-                        <p class="color-darks xl:text-18px md:text-12px text-10px">Tại tất cả các thành phố lớn</p>
-                    </div>
-                    <div class="col-span-2"></div>
-                    <div class="col-span-2">
-                        <p class="sm:text-[64px] text-[50px] md:text-[80px] font-bold text-[#26AAE1] m-0">Top 1</p>
-                        <p class="sm:text-[24px] font-bold text-[#26AAE1]">Công ty đồ uống</p>
-                        <p class="sm:text-[24px] text-[16px] text-12px color-darks">Uy tín tại Việt Nam (Năm 2019-2024, theo
-                            Vietnam Report)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            "
+            :imageSrc="MEDIA.images.pathGroup_01"
+            imageAlt="suntory-pepsico"
+            :stats="[
+                { number: 6, title: 'Nhà máy sản xuất', subtitle: 'Trải dài khắp Việt Nam', colSpan: 1 },
+                { number: 13, title: 'Thương hiệu hàng đầu', subtitle: 'Phục vụ người Việt', colSpan: 1 },
+                { colSpan: 1, empty: true },  // Cột trống
+                { number: 5, title: 'Văn phòng', subtitle: 'Tại tất cả các thành phố lớn', colSpan: 1 },
+                { colSpan: 2, empty: true },  // Cột trống lớn
+                { number: 1, title: 'Công ty đồ uống', subtitle: 'Uy tín tại Việt Nam (2019-2024, theo Vietnam Report)', colSpan: 2 }
+            ]"
+        />
 
         <!-- Project Objective Slider -->
         <div class="info-product-slider relative mt-31 xl:h-[63rem] md:h-[60vw] h-80vw bg-gradient-blue space-y-8 z-10">
@@ -277,7 +217,7 @@
             </div>
             <div class="">
                 <div><img :src="rectangle" alt="" class="absolute left-0 bottom-0 w-full"></div>
-                <div class="container"><img :src="nature" alt="" class="absolute xl:left-1/5 lg:left-[20%] md:left-[18%] left-[20%] xl:bottom-[-35%] lg:bottom-[-30%] md:bottom-[-30%] bottom-[-25%] z-10 xl:w-60vw lg:w-60vw md:w-60vw w-60vw"></div>
+                <div class="container"><img :src="nature" alt="" class="absolute top-80 right-15 lg:right-140 lg:w-auto lg:max-w-full lg:top-[45rem] z-1 w-[70vw] transform-[50%] max-w-[40rem] min-w-[10rem]"></div>
                 <div><img :src="path_group_04" alt="" class="absolute left-0 bottom-[-2%] xl:w-[371px] xl:h-[390px] lg:w-[23vw] md:w-[20vw] w-25vw"></div>
                 <div class="max-w-12"><img :src="path_group_05" alt="" class="absolute xl:right-0 md:right-0 right-[-4%] xl:bottom-[-10%] md:bottom-[-15%] md:bottom-[-25%] bottom-[-35%] w-[full] h-[390px] z-0 xl:scale-100 scale-70"></div>
             </div>
@@ -336,6 +276,10 @@ import arrow from "@/assets/images/info/water-card/arrow.png"
 import Shape_brand1 from "@/assets/images/info/water-card/Shape_brand.png"
 import Ellipse_19179 from "@/assets/images/info/group/Ellipse_19179.png"
 
+// Project Overview 
+import ProjectOverview from './../components/ProjectOverview.vue';
+import SuntoryPepsicoInfo from './../components/SuntoryPepsicoInfo.vue';
+import { MEDIA } from './../../constants/media';
 
 
 
