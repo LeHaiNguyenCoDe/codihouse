@@ -114,16 +114,16 @@
                     <div class="info-product--title-square bg-[#7BE2F6] mt-0.5"></div>
                     <label class="font-medium text-title-regular color-white ml-2">Tổng quan dự án</label>
                 </div>
-                <div class="col-start-3 col-span-1 text-white text-[16px] -ml-4 w-11/12 xl:flex md:hidden hidden">
+                <div class="col-start-3 col-span-1 text-white text-[16px] ml-5 w-11/12 xl:flex md:hidden hidden">
                     Dự án thiết kế website mới cho Suntory Pepsico hướng đến việc "đánh thức mọi giác quan" của
                     người dùng, mang đến một trải nghiệm số đầy cảm xúc và kết nối sâu sắc với tinh thần "Thổi hồn vào
                     sự rực rỡ
                 </div>
             </div>
             <div
-                class="info-product-slider--content w-full mx-auto flex xl:gap-3 lg:gap-3 md:gap-3 gap-0 overflow-hidden relative z-10">
-                <div class="behind-main slider-small absolute xl:left-1% lg:left-1% md:left-1% left-[-3%] w-20px">
-                    <transition-group name="fade" tag="div" class="flex justify-end">
+                class="info-product-slider--content w-full mx-auto flex gap-0 overflow-hidden relative z-10 xl:gap-6 lg:gap-8 md:gap-6 gap-3">
+                <div class="behind-main slider-small w-4vw -mx-[1vw]">
+                    <transition-group name="fade" tag="div" class="flex justify-end mx-[1vw]">
                         <div v-if="behindSlide" @click="changeSlide(mainSlideIndex - 1)">
                             <img :src="behindSlide.image" alt="Slide"
                                 class="xl:w-[411px] xl:h-[211px] object-cover md:w-[25vw] md:h-[15vw] w-25vw">
@@ -131,10 +131,10 @@
                     </transition-group>
                 </div>
 
-                <div class="slider-main mx-1/24 w-[55%] relative z-10">
-                    <transition name="fade" mode="out-in">
+                <div class="slider-main w-[60vw] relative z-10">
+                    <transition name="fade" mode="out-in" class="w-60vw">
                         <img :src="mainSlide.image" :key="mainSlide.image" alt="Main Slide"
-                            class="xl:w-[845px] xl:h-[536px] md:w-[55vw] md:h-[35vw] w-55vw">
+                            class="xl:w-60vw xl:h-[536px] md:w-[60vw] md:h-[35vw] w-55vw object-cover ">
                     </transition>
                     <transition name="fade" mode="out-in" class="flex items-start xl:w-8/12 lg:w-full gap-4">
                         <div class="font-[Montserrat] font-bold xl:text-32px lg:text-32px md:text-24px text-12px xl:leading-36px lg:leading-36px md:leading-36px leading-12pxtracking-[2%] text-white"
@@ -147,9 +147,9 @@
                     </transition>
                 </div>
 
-                <div class="h-full grid grid-rows-2 gap-7 items-end">
+                <div class="h-full grid grid-rows-2 gap-7 items-end w-[30vw]">
                     <div class="slider-small">
-                        <transition-group name="fade" tag="div" class="flex xl:gap-7 md:gap-7 gap-2">
+                        <transition-group name="fade" tag="div" class="flex xl:gap-6 md:gap-6 gap-2">
                             <div v-for="(slide, index) in filteredSlides" :key="index"
                                 @click="changeSlide(mainSlideIndex + index + 1)">
                                 <img :src="slide.image" alt="Slide"
@@ -162,7 +162,7 @@
                         </transition-group>
                     </div>
                     <div
-                        class="absolute xl:bottom-12% lg:bottom-15% md:bottom-20% xl:left-85% lg:left-80% md:left-75% bottom-22% left-70% flex gap-2 xl:scale-100 md:scale-70 scale-50">
+                        class="absolute xl:bottom-12% lg:bottom-15% md:bottom-20% xl:left-84vw lg:left-82vw md:left-80vw bottom-10vw left-70vw flex gap-2 xl:scale-100 md:scale-70 scale-50">
                         <button :disabled="mainSlideIndex === 0"
                             class="w-14 h-14 flex justify-center items-center info-product-slider-button border-[#D3FCFD] rounded-full bg-transparent disabled:opacity-50"
                             @click="prevSlide">

@@ -1,5 +1,5 @@
 <template>
-	<div class="solution--experience bg-gradient-01 pb-4 min-h-[947px] max-h-[947px]">
+	<div class="solution--experience bg-gradient-01 pb-4 min-h-[947px] max-h-[947px] -mt-1">
 		<div class="-my-10">
 			<img :src="arrow" alt="arrow icon" class="block mx-auto mb-5">
 			<span class="text-[18px] font-sans font-medium text-white">Giải pháp thiết kế</span>
