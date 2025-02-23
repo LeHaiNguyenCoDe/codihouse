@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { useBannerAnimation } from "@/composables/useBannerAnimation";
+import { useBannerAnimation } from "../../composables/useBannerAnimation";
 
 const { bannerRef } = useBannerAnimation();
 </script>

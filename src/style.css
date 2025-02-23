@@ -79,6 +79,16 @@
 .text-body-large { font-size: 18px; }
 .text-body-medium { font-size: 16px; }
 .text-body-regular { font-size: 14px; }
+.text-body-info { font-size: 16px; line-height: 24px; font-weight: 400;}
+.text-body-info-arrow {
+  font-family: BT Beau Sans;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 5%;
+text-align: center;
+
+}
 
 .info-product--title-square {inline-size: 12px; block-size: 12px;}
 .info-product-slider-button { border: 1px solid }
@@ -191,8 +201,8 @@
   }
   .left-phone {
     position: absolute;
-    inset-block-start: 31%;
-    inset-inline-start: -20%;
+    inset-block-start: 50%;
+    inset-inline-start: -25%;
     z-index: 2;
     @media (max-width: 1024px) {
       transform: scale(0.7);
@@ -211,8 +221,8 @@
   }
   .right-phone {
     position: absolute;
-    inset-block-end: 18%;
-    inset-inline-end: -22%;
+    inset-block-end: 42%;
+    inset-inline-end: -24%;
     z-index: 2;
     @media (max-width: 1024px) {
       transform: scale(0.7);
@@ -239,8 +249,3 @@
   .animated-circle {
     clip-path: circle(100% at center);
   }
-
-
-
-  /* SincereConnection */
-

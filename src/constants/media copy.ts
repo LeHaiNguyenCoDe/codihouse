@@ -57,13 +57,11 @@ export const MEDIA = {
     card_image_02: new URL("@/assets/images/info/water-card/card-image-02.png", import.meta.url).href,
     forest: new URL("@/assets/images/info/water-card/forest.png", import.meta.url).href,
     arrow: new URL("@/assets/images/info/water-card/arrow.png", import.meta.url).href,
-    vector_water: new URL("@/assets/images/info/water-card/vector.png", import.meta.url).href,
+    vector_water: new URL("@/assets/images/info/water-card/arrow.png", import.meta.url).href,
 
     // Footer Images
     footer_banner: new URL("@/assets/images/info/mobile/footer-banner.svg", import.meta.url).href,
     big_circle: new URL("@/assets/images/info/group/ellipse_19180.png", import.meta.url).href,
-    arrow_footer: new URL("@/assets/images/info/mobile/ArrowFooter.svg", import.meta.url).href,
-  
   },
   
   videos: {

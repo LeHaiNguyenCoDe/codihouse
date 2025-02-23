@@ -7,13 +7,12 @@
     "dev": "vite",
     "build:normal": "NODE_ENV=production vite-ssg build --debug",
     "preview": "vite preview",
-    "build": "cross-env NODE_ENV=production LANG=us vite-ssg build --debug -c vite.config.ts --ssrManifest",
+    "build": "NODE_ENV=production LANG=us vite-ssg build --debug -c vite.config.ts --ssrManifest",
     "vercel": "vercel deploy"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
     "@unhead/vue": "^1.11.18",
-    "@vueuse/core": "^12.7.0",
     "gsap": "^3.12.7",
     "motion": "^12.4.2",
     "scrollmagic": "^2.0.8",
@@ -24,12 +23,11 @@
     "vue-i18n": "^11.1.1"
   },
   "devDependencies": {
+    "@types/gsap": "^1.20.2",
     "@types/node": "^22.13.1",
-    "@types/scrollmagic": "^2.0.8",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.20",
-    "cross-env": "^7.0.3",
     "postcss": "^8.5.2",
     "typescript": "~5.6.2",
     "unocss": "^65.4.3",
