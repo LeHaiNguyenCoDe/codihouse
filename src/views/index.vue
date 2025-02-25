@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main class="container">
+  <main class="container flex mx-auto">
     <Home />
   </main>
   <Footer />

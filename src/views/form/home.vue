@@ -1,5 +1,10 @@
 <template>
-   <div class="container">
-    Margin example from 20px to 40px.
-</div>
+   <section class="container">
+        <OverView />
+        <videoSection />
+   </section>
 </template>
+<script lang="ts" setup>
+import OverView from './main/overView.vue';
+import videoSection from './main/videoSection.vue';
+</script>
